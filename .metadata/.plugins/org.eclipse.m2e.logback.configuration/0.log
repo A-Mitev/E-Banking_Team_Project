@@ -1,0 +1,56 @@
+2016-03-27 13:42:59,236 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: Fibank:Fibank:0.0.1-SNAPSHOT @ C:\Users\Asus\Documents\GitHub\E-Banking\Fibank\pom.xml.
+2016-03-27 13:43:00,716 [Worker-2] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Fibank/src
+2016-03-27 13:43:00,727 [Worker-2] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /Fibank/src/test/java because it overlaps with /Fibank/src
+2016-03-27 13:43:01,116 [Worker-2] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2016-03-27 13:43:01,648 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.maven.ide.eclipse.wtp.WarLifecycleMapping lifecycle mapping for MavenProject: Fibank:Fibank:0.0.1-SNAPSHOT @ C:\Users\Asus\Documents\GitHub\E-Banking\Fibank\pom.xml.
+2016-03-27 13:43:02,657 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-27 13:43:02,664 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Asus\Documents\GitHub\E-Banking\Fibank\src\main\resources
+2016-03-27 13:43:02,666 [Worker-0] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-27 13:43:02,710 [Worker-0] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Asus\Documents\GitHub\E-Banking\Fibank\src\test\resources
+2016-03-27 13:43:02,738 [Worker-2] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /Fibank/src
+2016-03-27 13:43:02,739 [Worker-2] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Not adding source folder /Fibank/src/test/java because it overlaps with /Fibank/src
+2016-03-27 13:43:02,984 [Worker-2] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for Fibank
+2016-03-27 13:43:03,003 [Worker-2] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 1 sec
+2016-03-27 13:43:03,759 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-27 13:43:03,779 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Asus\Documents\GitHub\E-Banking\Fibank\src\main\resources
+2016-03-27 13:43:03,781 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-27 13:43:03,803 [Worker-4] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Asus\Documents\GitHub\E-Banking\Fibank\src\test\resources
+2016-03-27 13:43:03,803 [Worker-4] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of Fibank
+2016-03-27 13:43:03,807 [Worker-4] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for Fibank
+2016-03-27 13:43:03,886 [Worker-4] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-27 14:16:22,000 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-27 14:16:22,005 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Asus\Documents\GitHub\E-Banking\Fibank\src\main\resources
+2016-03-27 14:16:22,007 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-27 14:16:22,011 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Asus\Documents\GitHub\E-Banking\Fibank\src\test\resources
+2016-03-27 14:16:42,236 [Worker-23] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-27 14:16:42,246 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Asus\Documents\GitHub\E-Banking\Fibank\src\main\resources
+2016-03-27 14:16:42,251 [Worker-23] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-27 14:16:42,258 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Asus\Documents\GitHub\E-Banking\Fibank\src\test\resources
+2016-03-27 14:16:58,588 [Worker-24] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-27 14:16:58,598 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Asus\Documents\GitHub\E-Banking\Fibank\src\main\resources
+2016-03-27 14:16:58,601 [Worker-24] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-27 14:16:58,613 [Worker-24] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Asus\Documents\GitHub\E-Banking\Fibank\src\test\resources
+2016-03-27 14:17:37,923 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-27 14:17:37,939 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Asus\Documents\GitHub\E-Banking\Fibank\src\main\resources
+2016-03-27 14:17:37,945 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-27 14:17:37,950 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Asus\Documents\GitHub\E-Banking\Fibank\src\test\resources
+2016-03-27 14:17:42,661 [Worker-22] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-27 14:17:42,666 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Asus\Documents\GitHub\E-Banking\Fibank\src\main\resources
+2016-03-27 14:17:42,668 [Worker-22] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-27 14:17:42,672 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Asus\Documents\GitHub\E-Banking\Fibank\src\test\resources
+2016-03-27 14:17:55,872 [Worker-22] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-27 14:17:55,887 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Asus\Documents\GitHub\E-Banking\Fibank\src\main\resources
+2016-03-27 14:17:55,893 [Worker-22] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-27 14:17:55,900 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Asus\Documents\GitHub\E-Banking\Fibank\src\test\resources
+2016-03-27 14:18:03,759 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-27 14:18:03,774 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Asus\Documents\GitHub\E-Banking\Fibank\src\main\resources
+2016-03-27 14:18:03,775 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-27 14:18:03,783 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Asus\Documents\GitHub\E-Banking\Fibank\src\test\resources
+2016-03-27 14:18:17,502 [Worker-22] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-27 14:18:17,510 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Asus\Documents\GitHub\E-Banking\Fibank\src\main\resources
+2016-03-27 14:18:17,517 [Worker-22] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-27 14:18:17,521 [Worker-22] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Asus\Documents\GitHub\E-Banking\Fibank\src\test\resources
+2016-03-27 14:19:39,369 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-27 14:19:39,375 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Asus\Documents\GitHub\E-Banking\Fibank\src\main\resources
+2016-03-27 14:19:39,376 [Worker-13] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2016-03-27 14:19:39,383 [Worker-13] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Asus\Documents\GitHub\E-Banking\Fibank\src\test\resources
