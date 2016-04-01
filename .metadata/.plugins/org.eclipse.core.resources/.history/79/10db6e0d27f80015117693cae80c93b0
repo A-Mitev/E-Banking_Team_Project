@@ -18,7 +18,7 @@
                         <label style="text-align:left;" id="l_username" for="UserField">User name:<input type="text" class="inputi" value="" name="fldUserId" id="UserField" autocomplete="off">
                           <span class="RequiredData" id="resUserField">&nbsp;</span>
                         </label>
-                        <label style="text-align:left;" id="l_password" for="PasswordField">Password:<input type="password" class="inputi" value="" name="fldPassword" id="PasswordField" autocomplete="off">
+                        <label style="text-align:left;" id="l_password" for="PasswordField">Passwor:<input type="password" class="inputi" value="" name="fldPassword" id="PasswordField" autocomplete="off">
                           <span class="RequiredData" id="resPasswordField">&nbsp;</span>
                         </label>
                       </div>
@@ -35,14 +35,14 @@
                                   <a title="Регистрация на потребител" id="a_reg" target="_self" href="Registration">Registration</a>
                                 </td>
                                 <td style="padding-left:10px;">
-                                  <a target="_self" href="../LostPassword" id="a_LostPswd">Password reset</a>
+                                  <a target="_self" href="../LostPassword" id="a_LostPswd">Passwor reset</a>
                                 </td>
                               </tr>
                             </tbody></table>
                           </td>
                           <td>
                             <div style="height:28px; margin:10px 0; ">
-                              <input type="submit" value="Login" class="button">
+                              <input type="submit" value="Вход" class="button">
                              
                             </div>
                           </td>
