@@ -3,5 +3,4 @@ INDEX VERSION 1.3+C:\Users\Asus\Documents\GitHub\E-Banking\.metadata\.plugins\or
 2890946463.index
 904807163.index
 2591627142.index
-3441344662.index
 3298774809.index
