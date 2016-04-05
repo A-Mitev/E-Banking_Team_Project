@@ -65,7 +65,6 @@ INDEX VERSION 1.127+C:\Users\Asus\Documents\GitHub\E-Banking\.metadata\.plugins\
 749023253.index
 2245234302.index
 2669750629.index
-1831628712.index
 3938651512.index
 2442888519.index
 455060042.index
