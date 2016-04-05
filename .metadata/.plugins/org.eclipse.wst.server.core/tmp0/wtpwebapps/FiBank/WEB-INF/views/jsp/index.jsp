@@ -2,23 +2,25 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<link type="text/css" rel="stylesheet" href="/loginForm.css" />
+<link type="text/css" rel="stylesheet" href="css/loginForm.css" />
 <div style="min-height:650px;text-align:center;" class="fluid" id="body">
       <div class="containercenter">
         <div id="logincontent">
           <div id="loginform">
-            <form action="Login" method="post" id="frmLogon" name="frmLogon">
+            <form action="index" method="post" id="frmLogon" name="frmLogon">
               <h2 id="FrmH2">My Fibank</h2>
+              <br>
+              ${text}
               <br>
               <fieldset style="font-family: 'Trebuchet MS', arial, sans-serif;">
                 <table style="width: 500px;">
                   <tbody><tr>
                     <td>
                       <div style="padding-left:15px; height:60px">
-                        <label style="text-align:left;" id="l_username" for="UserField">User name:<input type="text" class="inputi" value="" name="fldUserId" id="UserField" autocomplete="off">
-                          <span class="RequiredData" id="resUserField">&nbsp;</span>
+                        <label style="text-align:left;" >Email:<input type="text" class="inputi"  name="email">
+                          <span  id="resUserField"></span>
                         </label>
-                        <label style="text-align:left;" id="l_password" for="PasswordField">Password:<input type="password" class="inputi" value="" name="fldPassword" id="PasswordField" autocomplete="off">
+                        <label style="text-align:left;" id="l_password" for="PasswordField">Password:<input type="password" class="inputi" value="" name="pass" id="PasswordField" autocomplete="off">
                           <span class="RequiredData" id="resPasswordField">&nbsp;</span>
                         </label>
                       </div>
@@ -32,10 +34,10 @@
                             <table style="font-size: 12px; margin-left:35px">
                               <tbody><tr>
                                 <td>
-                                  <a title="Регистрация на потребител" id="a_reg" target="_self" href="Registration">Registration</a>
+                                  <a id="a_reg"  href="Reg">Registration</a>
                                 </td>
                                 <td style="padding-left:10px;">
-                                  <a target="_self" href="../LostPassword" id="a_LostPswd">Password reset</a>
+                                  <a  id="a_LostPswd"  href="LostPassword">Password reset</a>
                                 </td>
                               </tr>
                             </tbody></table>
@@ -55,6 +57,7 @@
               <input type="hidden" value="Login" name="LoginType" id="LoginType">
               <input type="hidden" value="bg" name="Lang" id="Lang">
             </form>
+            
           </div>
         </div>
       </div>
