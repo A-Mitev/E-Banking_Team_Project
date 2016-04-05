@@ -14,8 +14,9 @@ public class User {
 	private String email;
 	private String username;
 	private String password;
+	private TypesOfUsers typeOfUser;
 
-	public User(String id,String name, String address, String phone, String email, String username, String password) {
+	public User(String id,String name, String address, String phone, String email, String username, String password, TypesOfUsers typeOfUser) {
 		setId(id);
 		setName(name);
 		setAddress(address);
@@ -23,6 +24,7 @@ public class User {
 		setEmail(email);
 		setUsername(username);
 		setPassword(password);
+		setTypeOfUser(typeOfUser);
 	}
 
 	@NotNull(message = "The id is compulsory!")
@@ -106,6 +108,14 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public TypesOfUsers getTypeOfUser() {
+		return typeOfUser;
+	}
+
+	public void setTypeOfUser(TypesOfUsers typeOfUser) {
+		this.typeOfUser = typeOfUser;
 	}
 
 }
