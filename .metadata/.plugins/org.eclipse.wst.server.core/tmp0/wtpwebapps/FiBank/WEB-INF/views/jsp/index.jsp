@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<link type="text/css" rel="stylesheet" href="loginForm.css" />
+<link type="text/css" rel="stylesheet" href="/loginForm.css" />
 <div style="min-height:650px;text-align:center;" class="fluid" id="body">
       <div class="containercenter">
         <div id="logincontent">

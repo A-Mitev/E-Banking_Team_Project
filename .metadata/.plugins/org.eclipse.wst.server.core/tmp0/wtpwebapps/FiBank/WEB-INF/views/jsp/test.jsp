@@ -9,6 +9,18 @@
 
 <body>
 	<h1> ${text} </h1> 
-	<p> Last added product: ${product.name}</p>
+	<form>
+	</form>
+	
+	<form>
+	</form>
+	
+	<form action="./index" method="post">
+	<label>Email</label>
+	<input type="text" name="email"/>
+	<label>Password</label>
+	<input type="text" name="pass"/>
+	<input type="submit" value="login"/>
+	</form>
 </body>
 </html>
