@@ -9,7 +9,8 @@
 <title>Register Page</title>
 </head>
 <body>
-
+		${text};
+	<br/>
 	<springForm:form method="post" commandName="user">
 	<label>Enter your EGN/Bulstat:</label>
 	<springForm:input type="text" path="id"/>
@@ -29,11 +30,6 @@
 	<label>Enter your password:</label>
 	<springForm:input type="text" path="password"/>
 	<br/>
-	<label>Private/Business customer:</label>
-	<springForm:select path="typeOfUser">
-	<option value="CITIZEN">Private</option>
-  	<option value="BUSINESS">Business</option>
-	</springForm:select>
 	<br/>
 	<input type="submit" value="Register as new client!"/>
 	</springForm:form>

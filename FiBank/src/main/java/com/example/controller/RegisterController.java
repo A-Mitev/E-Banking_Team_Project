@@ -22,9 +22,11 @@ public class RegisterController {
 	}	
 	
 	@RequestMapping(method = RequestMethod.POST)
-	public void clientRegister1(@ModelAttribute User client) throws UserException{
+	public String addClient(@ModelAttribute User client, Model model) throws UserException{
 		UserDAO newClient = new UserDAO();
-	newClient.addUser(client);
+		newClient.addUser(client);
+		model.addAttribute("text", "Registration was successful!");
+		return "Register";
 	}	
 
 }
