@@ -14,6 +14,9 @@ public class User {
 	private String email;
 	private String password;
 	private TypesOfUsers typeOfUser;
+	
+	public User() {
+	}
 
 	public User(String id,String name, String address, String phone, String email, String password, TypesOfUsers typeOfUser) {
 		setId(id);
@@ -24,6 +27,8 @@ public class User {
 		setPassword(password);
 		setTypeOfUser(typeOfUser);
 	}
+
+	
 
 	@NotNull(message = "The id is compulsory!")
 	@NotBlank(message = "The id is compulsory!")

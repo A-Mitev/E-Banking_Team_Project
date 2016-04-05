@@ -93,6 +93,7 @@ public class UserDAO extends AbstractDAO implements IUserDAO{
 		if(email==null || password==null){
 			return false;
 		}
+		System.out.println("stiga li do tuk ?");
 		try{
 		PreparedStatement ps = getCon().prepareStatement(SELECT_USER_BY_USERNAME_AND_PASSWORD_QUERY);
 		ps.setString(1, email);
