@@ -5,5 +5,9 @@
 <fullyQualifiedTypeName name="io.undertow.attribute.RequestMethodAttribute"/>
 <fullyQualifiedTypeName name="com.sun.research.ws.wadl.Request"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+<fullyQualifiedTypeName name="com.example.model.DBConnection"/>
+<fullyQualifiedTypeName name="com.example.model.User"/>
+<fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ModelAttribute"/>
 <fullyQualifiedTypeName name="com.example.model.UserDAO"/>
 </qualifiedTypeNameHistroy>
