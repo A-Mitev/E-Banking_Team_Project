@@ -12,20 +12,18 @@ public class User {
 	private String address;
 	private String phone;
 	private String email;
-	private String username;
 	private String password;
 	private TypesOfUsers typeOfUser;
 	
 	public User() {
 	}
 
-	public User(String id,String name, String address, String phone, String email, String username, String password, TypesOfUsers typeOfUser) {
+	public User(String id,String name, String address, String phone, String email, String password, TypesOfUsers typeOfUser) {
 		setId(id);
 		setName(name);
 		setAddress(address);
 		setPhone(phone);
 		setEmail(email);
-		setUsername(username);
 		setPassword(password);
 		setTypeOfUser(typeOfUser);
 	}
@@ -90,18 +88,8 @@ public class User {
 		this.email = email;
 	}
 
-	@NotNull(message = "The username is compulsory!")
-	@NotBlank(message = "The username is compulsory!")
-	@Size(min = 2, max = 45, message = "The username should be between 2 and 45 signs!")
-	@Pattern(regexp = "[^\\c]*", message = "The username has invalid characters!")
-
-	public String getUsername() {
-		return username;
-	}
-
-	public void setUsername(String username) {
-		this.username = username;
-	}
+	
+	
 
 	@NotNull(message = "The password is compulsory!")
 	@NotBlank(message = "The password is compulsory!")
