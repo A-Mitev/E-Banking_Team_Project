@@ -7,6 +7,12 @@
 <html>
 <head>
 <style> 
+fieldset{
+width:270px;
+border: 5px solid #cef1ff;
+background: #f1f5f6
+}
+
 input[type=text] {
     width: 100%;
     padding: 12px 20px;
@@ -21,7 +27,7 @@ input[type=text] {
 	 ${text}
 	<br />
 	<springForm:form method="post" commandName="user" >
-	<fieldset style="width:270px">
+	<fieldset>
 		<legend>Please enter your details!</legend>
 		<br/>
 		<label>Enter your EGN/Bulstat:</label>

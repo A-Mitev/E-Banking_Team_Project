@@ -3326,3 +3326,673 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2016-04-05 23:18:39.103 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_77
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-04-05 23:18:54.969
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Asus'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+!SESSION 2016-04-06 07:00:24.246 -----------------------------------------------
+eclipse.buildId=4.5.2.M20160212-1500
+java.version=1.8.0_77
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2016-04-06 07:01:03.869
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\Asus'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.ide.eclipse.boot 4 0 2016-04-06 07:53:36.812
+!MESSAGE LoginControler.java [in com.example.controller [in src/main/java [in FiBank]]] does not exist
+!STACK 1
+Java Model Exception: Java Model Status [LoginControler.java [in com.example.controller [in src/main/java [in FiBank]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newJavaModelException(JavaElement.java:566)
+	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:247)
+	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:579)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:316)
+	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:302)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:257)
+	at org.eclipse.jdt.internal.core.JavaElement.getChildrenOfType(JavaElement.java:271)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getTypes(CompilationUnit.java:923)
+	at org.eclipse.jdt.internal.core.CompilationUnit.getAllTypes(CompilationUnit.java:608)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule$ValidationVisitor.visit(MissingConfigurationProcessorRule.java:130)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule.validate(MissingConfigurationProcessorRule.java:200)
+	at org.springframework.ide.eclipse.boot.validation.MissingConfigurationProcessorRule.validate(MissingConfigurationProcessorRule.java:1)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator$ValidationVisitor.visit(AbstractValidator.java:280)
+	at org.springframework.ide.eclipse.core.model.AbstractModelElement.accept(AbstractModelElement.java:131)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator.validate(AbstractValidator.java:142)
+	at org.springframework.ide.eclipse.core.model.validation.AbstractValidator.validate(AbstractValidator.java:104)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$7.execute(SpringProjectContributionManager.java:260)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager$9.run(SpringProjectContributionManager.java:291)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.execute(SpringProjectContributionManager.java:294)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.runValidator(SpringProjectContributionManager.java:257)
+	at org.springframework.ide.eclipse.core.internal.project.SpringProjectContributionManager.build(SpringProjectContributionManager.java:131)
+	at org.eclipse.core.internal.events.BuildManager$2.run(BuildManager.java:734)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:205)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:245)
+	at org.eclipse.core.internal.events.BuildManager$1.run(BuildManager.java:300)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.BuildManager.basicBuild(BuildManager.java:303)
+	at org.eclipse.core.internal.events.BuildManager.basicBuildLoop(BuildManager.java:359)
+	at org.eclipse.core.internal.events.BuildManager.build(BuildManager.java:382)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:144)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 07:53:36.813
+!MESSAGE LoginControler.java [in com.example.controller [in src/main/java [in FiBank]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 1 4 2016-04-06 08:24:50.831
+!MESSAGE Full project indexing required:
+  [+] C:\Users\Asus\.m2\repository\mysql\mysql-connector-java\5.1.38\mysql-connector-java-5.1.38.jar
+
+!STACK 0
+org.eclipse.recommenders.utils.Logs$LogTraceException
+	at org.eclipse.recommenders.utils.Logs$LogTraceException.newTrace(Logs.java:381)
+	at org.eclipse.recommenders.utils.Logs.log(Logs.java:134)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.needsRebuild(ProjectTypesIndex.java:167)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.startUp(ProjectTypesIndex.java:122)
+	at com.google.common.util.concurrent.AbstractIdleService$2$1.run(AbstractIdleService.java:54)
+	at com.google.common.util.concurrent.Callables$3.run(Callables.java:93)
+	at java.lang.Thread.run(Unknown Source)
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2016-04-06 08:25:32.537
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘package (not open) [in package.class [in org.neo4j.cypher.internal.compiler.v2_0.parser [in C:\Users\Asus\.m2\repository\org\neo4j\neo4j-cypher-compiler-2.0\2.0.4\neo4j-cypher-compiler-2.0-2.0.4.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [package [in package.class [in org.neo4j.cypher.internal.compiler.v2_0.parser [in C:\Users\Asus\.m2\repository\org\neo4j\neo4j-cypher-compiler-2.0\2.0.4\neo4j-cypher-compiler-2.0-2.0.4.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 08:25:32.537
+!MESSAGE package [in package.class [in org.neo4j.cypher.internal.compiler.v2_0.parser [in C:\Users\Asus\.m2\repository\org\neo4j\neo4j-cypher-compiler-2.0\2.0.4\neo4j-cypher-compiler-2.0-2.0.4.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2016-04-06 08:25:33.552
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘package (not open) [in package.class [in org.neo4j.cypher.internal.compiler.v2_0.symbols [in C:\Users\Asus\.m2\repository\org\neo4j\neo4j-cypher-compiler-2.0\2.0.4\neo4j-cypher-compiler-2.0-2.0.4.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [package [in package.class [in org.neo4j.cypher.internal.compiler.v2_0.symbols [in C:\Users\Asus\.m2\repository\org\neo4j\neo4j-cypher-compiler-2.0\2.0.4\neo4j-cypher-compiler-2.0-2.0.4.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 08:25:33.552
+!MESSAGE package [in package.class [in org.neo4j.cypher.internal.compiler.v2_0.symbols [in C:\Users\Asus\.m2\repository\org\neo4j\neo4j-cypher-compiler-2.0\2.0.4\neo4j-cypher-compiler-2.0-2.0.4.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2016-04-06 08:25:36.006
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘package (not open) [in package.class [in org.neo4j.cypher.internal.compiler.v2_0 [in C:\Users\Asus\.m2\repository\org\neo4j\neo4j-cypher-compiler-2.0\2.0.4\neo4j-cypher-compiler-2.0-2.0.4.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [package [in package.class [in org.neo4j.cypher.internal.compiler.v2_0 [in C:\Users\Asus\.m2\repository\org\neo4j\neo4j-cypher-compiler-2.0\2.0.4\neo4j-cypher-compiler-2.0-2.0.4.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 08:25:36.006
+!MESSAGE package [in package.class [in org.neo4j.cypher.internal.compiler.v2_0 [in C:\Users\Asus\.m2\repository\org\neo4j\neo4j-cypher-compiler-2.0\2.0.4\neo4j-cypher-compiler-2.0-2.0.4.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2016-04-06 08:25:36.964
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘package (not open) [in package.class [in org.parboiled.scala [in C:\Users\Asus\.m2\repository\org\parboiled\parboiled-scala_2.10\1.1.6\parboiled-scala_2.10-1.1.6.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [package [in package.class [in org.parboiled.scala [in C:\Users\Asus\.m2\repository\org\parboiled\parboiled-scala_2.10\1.1.6\parboiled-scala_2.10-1.1.6.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 08:25:36.965
+!MESSAGE package [in package.class [in org.parboiled.scala [in C:\Users\Asus\.m2\repository\org\parboiled\parboiled-scala_2.10\1.1.6\parboiled-scala_2.10-1.1.6.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2016-04-06 08:25:37.221
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘package (not open) [in package.class [in scala.reflect [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [package [in package.class [in scala.reflect [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 08:25:37.221
+!MESSAGE package [in package.class [in scala.reflect [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2016-04-06 08:25:37.226
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘package (not open) [in package.class [in scala.annotation.target [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [package [in package.class [in scala.annotation.target [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 08:25:37.226
+!MESSAGE package [in package.class [in scala.annotation.target [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2016-04-06 08:25:37.884
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘native (not open) [in native.class [in scala [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [native [in native.class [in scala [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 08:25:37.884
+!MESSAGE native [in native.class [in scala [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2016-04-06 08:25:37.890
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘package (not open) [in package.class [in scala [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [package [in package.class [in scala [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 08:25:37.890
+!MESSAGE package [in package.class [in scala [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2016-04-06 08:25:37.896
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘throws (not open) [in throws.class [in scala [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [throws [in throws.class [in scala [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 08:25:37.896
+!MESSAGE throws [in throws.class [in scala [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2016-04-06 08:25:37.900
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘transient (not open) [in transient.class [in scala [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [transient [in transient.class [in scala [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 08:25:37.901
+!MESSAGE transient [in transient.class [in scala [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2016-04-06 08:25:37.905
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘volatile (not open) [in volatile.class [in scala [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [volatile [in volatile.class [in scala [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 08:25:37.905
+!MESSAGE volatile [in volatile.class [in scala [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2016-04-06 08:25:38.721
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘package (not open) [in package.class [in scala.collection.parallel.immutable [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [package [in package.class [in scala.collection.parallel.immutable [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 08:25:38.721
+!MESSAGE package [in package.class [in scala.collection.parallel.immutable [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2016-04-06 08:25:38.915
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘package (not open) [in package.class [in scala.collection.generic [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [package [in package.class [in scala.collection.generic [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 08:25:38.915
+!MESSAGE package [in package.class [in scala.collection.generic [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2016-04-06 08:25:38.955
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘strictfp (not open) [in strictfp.class [in scala.annotation [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [strictfp [in strictfp.class [in scala.annotation [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 08:25:38.955
+!MESSAGE strictfp [in strictfp.class [in scala.annotation [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2016-04-06 08:25:38.958
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘switch (not open) [in switch.class [in scala.annotation [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [switch [in switch.class [in scala.annotation [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 08:25:38.959
+!MESSAGE switch [in switch.class [in scala.annotation [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2016-04-06 08:25:39.041
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘package (not open) [in package.class [in scala.sys [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [package [in package.class [in scala.sys [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 08:25:39.041
+!MESSAGE package [in package.class [in scala.sys [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2016-04-06 08:25:39.187
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘package (not open) [in package.class [in scala.xml.pull [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [package [in package.class [in scala.xml.pull [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 08:25:39.187
+!MESSAGE package [in package.class [in scala.xml.pull [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2016-04-06 08:25:39.313
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘package (not open) [in package.class [in scala.concurrent.duration [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [package [in package.class [in scala.concurrent.duration [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 08:25:39.313
+!MESSAGE package [in package.class [in scala.concurrent.duration [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2016-04-06 08:25:39.662
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘package (not open) [in package.class [in scala.runtime [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [package [in package.class [in scala.runtime [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 08:25:39.662
+!MESSAGE package [in package.class [in scala.runtime [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2016-04-06 08:25:42.035
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘package (not open) [in package.class [in scala.collection.immutable [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [package [in package.class [in scala.collection.immutable [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 08:25:42.035
+!MESSAGE package [in package.class [in scala.collection.immutable [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2016-04-06 08:25:42.642
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘package (not open) [in package.class [in scala.collection.parallel.mutable [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [package [in package.class [in scala.collection.parallel.mutable [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 08:25:42.642
+!MESSAGE package [in package.class [in scala.collection.parallel.mutable [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2016-04-06 08:25:43.040
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘package (not open) [in package.class [in scala.math [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [package [in package.class [in scala.math [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 08:25:43.041
+!MESSAGE package [in package.class [in scala.math [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2016-04-06 08:25:43.225
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘package (not open) [in package.class [in scala.sys.process [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [package [in package.class [in scala.sys.process [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 08:25:43.225
+!MESSAGE package [in package.class [in scala.sys.process [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2016-04-06 08:25:43.271
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘package (not open) [in package.class [in scala.util.hashing [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [package [in package.class [in scala.util.hashing [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 08:25:43.271
+!MESSAGE package [in package.class [in scala.util.hashing [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2016-04-06 08:25:43.688
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘package (not open) [in package.class [in scala.xml [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [package [in package.class [in scala.xml [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 08:25:43.688
+!MESSAGE package [in package.class [in scala.xml [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2016-04-06 08:25:43.725
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘package (not open) [in package.class [in scala.util.continuations [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [package [in package.class [in scala.util.continuations [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 08:25:43.725
+!MESSAGE package [in package.class [in scala.util.continuations [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2016-04-06 08:25:43.921
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘package (not open) [in package.class [in scala.collection.convert [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [package [in package.class [in scala.collection.convert [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 08:25:43.922
+!MESSAGE package [in package.class [in scala.collection.convert [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2016-04-06 08:25:44.284
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘package (not open) [in package.class [in scala.concurrent [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [package [in package.class [in scala.concurrent [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 08:25:44.284
+!MESSAGE package [in package.class [in scala.concurrent [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2016-04-06 08:25:45.417
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘package (not open) [in package.class [in scala.collection [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [package [in package.class [in scala.collection [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 08:25:45.418
+!MESSAGE package [in package.class [in scala.collection [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2016-04-06 08:25:48.361
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘package (not open) [in package.class [in scala.collection.parallel [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [package [in package.class [in scala.collection.parallel [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 08:25:48.362
+!MESSAGE package [in package.class [in scala.collection.parallel [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist
+
+!ENTRY org.eclipse.recommenders.types.rcp 4 2 2016-04-06 08:25:48.374
+!MESSAGE An error occurred while accessing the type hierarchy of type ‘package (not open) [in package.class [in scala.annotation.meta [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]]’.
+!STACK 1
+Java Model Exception: Java Model Status [package [in package.class [in scala.annotation.meta [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist]
+	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:785)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:826)
+	at org.eclipse.jdt.internal.core.BinaryType.newSupertypeHierarchy(BinaryType.java:778)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.indexType(ProjectTypesIndex.java:409)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuildRoot(ProjectTypesIndex.java:358)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex.rebuild(ProjectTypesIndex.java:345)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.doRun(ProjectTypesIndex.java:321)
+	at org.eclipse.recommenders.internal.types.rcp.ProjectTypesIndex$2.run(ProjectTypesIndex.java:312)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-06 08:25:48.375
+!MESSAGE package [in package.class [in scala.annotation.meta [in C:\Users\Asus\.m2\repository\org\scala-lang\scala-library\2.10.3\scala-library-2.10.3.jar]]] does not exist
+
+!ENTRY org.eclipse.text 4 2 2016-04-06 09:05:52.773
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.text".
+!STACK 0
+java.lang.IllegalArgumentException: Index out of bounds
+	at org.eclipse.swt.SWT.error(SWT.java:4472)
+	at org.eclipse.swt.SWT.error(SWT.java:4406)
+	at org.eclipse.swt.SWT.error(SWT.java:4377)
+	at org.eclipse.swt.graphics.TextLayout._getOffset(TextLayout.java:2095)
+	at org.eclipse.swt.graphics.TextLayout.getPreviousOffset(TextLayout.java:2354)
+	at org.eclipse.swt.custom.StyledText.getPointAtOffset(StyledText.java:5472)
+	at org.eclipse.swt.custom.StyledText.setCaretLocation(StyledText.java:8547)
+	at org.eclipse.swt.custom.StyledText.updateSelection(StyledText.java:10429)
+	at org.eclipse.swt.custom.StyledText.handleTextChanged(StyledText.java:6265)
+	at org.eclipse.swt.custom.StyledText$6.textChanged(StyledText.java:5665)
+	at org.eclipse.ui.internal.console.ConsoleDocumentAdapter.documentChanged(ConsoleDocumentAdapter.java:389)
+	at org.eclipse.jface.text.AbstractDocument.doFireDocumentChanged2(AbstractDocument.java:769)
+	at org.eclipse.jface.text.AbstractDocument.doFireDocumentChanged(AbstractDocument.java:736)
+	at org.eclipse.jface.text.AbstractDocument.doFireDocumentChanged(AbstractDocument.java:721)
+	at org.eclipse.jface.text.AbstractDocument.fireDocumentChanged(AbstractDocument.java:796)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1191)
+	at org.eclipse.jface.text.AbstractDocument.replace(AbstractDocument.java:1210)
+	at org.eclipse.ui.internal.console.ConsoleDocument.replace(ConsoleDocument.java:92)
+	at org.eclipse.ui.internal.console.IOConsolePartitioner$TrimJob.runInUIThread(IOConsolePartitioner.java:663)
+	at org.eclipse.ui.progress.UIJob$1.run(UIJob.java:97)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:35)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:135)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4155)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3772)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$4.run(PartRenderingEngine.java:1127)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1018)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:156)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:694)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:337)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:606)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:150)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:139)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:380)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:235)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:669)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:608)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1515)
+
+!ENTRY org.eclipse.jdt.core 4 969 2016-04-06 09:43:17.626
+!MESSAGE isExistingEmail(String) [in PasswordRecoveryController [in [Working copy] PasswordRecoveryController.java [in com.example.controller [in src/main/java [in FiBank]]]]] does not exist
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2016-04-06 10:09:01.065
+!MESSAGE Server returned lastModified <= 0 for https://raw.github.com/guari/eclipse-ui-theme/master/com.github.eclipseuitheme.themes.updatesite/content.jar
+
+!ENTRY org.eclipse.equinox.p2.core 4 0 2016-04-06 10:10:48.930
+!MESSAGE Provisioning exception
+!STACK 1
+org.eclipse.equinox.p2.core.ProvisionException: No repository found at http://download.eclipse.org/tools/mylyn/update/.
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.fail(AbstractRepositoryManager.java:395)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:116)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.fail(CachingRepositoryManager.java:283)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:186)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:389)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.addChild(CompositeMetadataRepository.java:166)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepository.<init>(CompositeMetadataRepository.java:106)
+	at org.eclipse.equinox.internal.p2.metadata.repository.CompositeMetadataRepositoryFactory.load(CompositeMetadataRepositoryFactory.java:122)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:57)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:768)
+	at sun.reflect.GeneratedMethodAccessor117.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.oomph.util.ReflectUtil.invokeMethod(ReflectUtil.java:116)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:339)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager.loadRepository(CachingRepositoryManager.java:146)
+	at org.eclipse.oomph.p2.internal.core.CachingRepositoryManager$Metadata.loadRepository(CachingRepositoryManager.java:389)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:96)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:92)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:151)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:129)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:73)
+!SUBENTRY 1 org.eclipse.equinox.p2.metadata.repository 4 1000 2016-04-06 10:10:48.931
+!MESSAGE No repository found at http://download.eclipse.org/tools/mylyn/update/.

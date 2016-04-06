@@ -12,7 +12,7 @@ import com.example.model.UserDAO;
 
 @Controller
 @RequestMapping(value="/Reg")
-public class RegisterController {
+public class RegisterController{
 	
 	@RequestMapping(method = RequestMethod.GET)
 	public String clientRegister(Model model){
