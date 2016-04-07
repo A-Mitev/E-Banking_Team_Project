@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.example.dao.UserDAO;
 import com.example.exception.UserException;
-import com.example.model.UserDAO;
 @Controller
 @RequestMapping(value="/index")
 public class LoginControler {

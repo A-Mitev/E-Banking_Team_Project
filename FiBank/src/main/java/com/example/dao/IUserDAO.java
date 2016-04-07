@@ -1,8 +1,9 @@
-package com.example.model;
+package com.example.dao;
 
 import java.util.List;
 
 import com.example.exception.UserException;
+import com.example.model.User;
 
 public interface IUserDAO {
 

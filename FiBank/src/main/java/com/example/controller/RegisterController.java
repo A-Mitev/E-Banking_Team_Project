@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.example.dao.UserDAO;
 import com.example.exception.UserException;
 import com.example.model.User;
-import com.example.model.UserDAO;
 
 @Controller
 @RequestMapping(value="/Reg")

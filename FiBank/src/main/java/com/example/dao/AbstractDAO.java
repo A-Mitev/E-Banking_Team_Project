@@ -1,6 +1,8 @@
-package com.example.model;
+package com.example.dao;
 
 import java.sql.Connection;
+
+import com.example.model.DBConnection;
 
 public abstract class AbstractDAO {
 	
