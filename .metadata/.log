@@ -7944,3 +7944,12 @@ Java Model Exception: Java Model Status [TypesOfUsers.java [in com.example.model
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
 !SUBENTRY 1 org.eclipse.jdt.core 4 969 2016-04-07 14:52:33.150
 !MESSAGE TypesOfUsers.java [in com.example.model [in src/main/java [in FiBank]]] does not exist
+
+!ENTRY org.eclipse.jdt.core 4 969 2016-04-07 17:00:55.498
+!MESSAGE showCustomerAccounts(String, Model) [in AfterLoginController [in [Working copy] AfterLoginController.java [in com.example.controller [in src/main/java [in FiBank]]]]] does not exist
+
+!ENTRY org.eclipse.jdt.core 4 969 2016-04-07 17:03:24.155
+!MESSAGE showCustomerAccounts(Model) [in AfterLoginController [in [Working copy] AfterLoginController.java [in com.example.controller [in src/main/java [in FiBank]]]]] does not exist
+
+!ENTRY org.eclipse.jdt.core 4 969 2016-04-07 17:48:43.545
+!MESSAGE showCustomerAccounts(HTTModel, User) [in AfterLoginController [in [Working copy] AfterLoginController.java [in com.example.controller [in src/main/java [in FiBank]]]]] does not exist

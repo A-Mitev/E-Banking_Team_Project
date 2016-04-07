@@ -1,16 +1,26 @@
 package com.example.controller;
 
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.example.dao.UserDAO;
 import com.example.exception.UserException;
 @Controller
 @RequestMapping(value="/index")
-public class LoginController {
+public class LoginController extends HttpServlet {
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 9075837470601406564L;
 
 	@RequestMapping(method = RequestMethod.GET)
 	public String sayHello(Model model) {
@@ -19,11 +29,17 @@ public class LoginController {
 	}	
 	
 	@RequestMapping(method = RequestMethod.POST)
-	public String userAuthentication(@RequestParam("email")String email,
+	public String userAuthentication(HttpServletRequest request,@RequestParam("email")String email,
 			@RequestParam("pass") String pass, Model model) throws UserException{
 		UserDAO client = new UserDAO();
 		System.out.println("Stiga li do tuk (proverka user)" + email + " " + pass);
 		if(client.isUserExcisting(email, pass)){
+			HttpSession session = request.getSession();
+			session.setAttribute("test", email);
+			
+			System.out.println(session.getAttribute("test")+ "opaaaaaaaaaaaaaaa");
+			session.setMaxInactiveInterval(-1);
+			
 			return "Welcome";
 		} else {
 			model.addAttribute("text1", "Username ot password - invalid."
@@ -31,4 +47,7 @@ public class LoginController {
 			return "index";
 		}
 	}
+	
+	
+	
 }

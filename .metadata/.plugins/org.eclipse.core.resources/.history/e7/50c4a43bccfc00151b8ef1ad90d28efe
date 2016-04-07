@@ -1,0 +1,36 @@
+package com.example.controller;
+
+import java.util.List;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
+
+import com.example.dao.AccountDAO;
+import com.example.exception.AccountException;
+import com.example.exception.BankProductException;
+import com.example.exception.UserException;
+
+import io.undertow.server.session.Session;
+
+@Controller
+@RequestMapping(value = "/accounts")
+@SessionAttributes({"user"})
+
+public class AfterLoginController {
+	
+	@RequestMapping(method = RequestMethod.GET)
+	public String showCustomerAccounts(Model model,  @ModelAttribute User user)
+			throws AccountException, UserException, BankProductException {
+
+		AccountDAO accounts = new AccountDAO();
+		List acc = accounts.getAllAccounts();
+		model.addAttribute("user", );
+		return "Accounts";
+
+	}
+	
+}
