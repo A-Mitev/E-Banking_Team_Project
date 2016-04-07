@@ -19,14 +19,14 @@ public class LoginController {
 	}	
 	
 	@RequestMapping(method = RequestMethod.POST)
-	public String userAuthentication(@RequestParam("email")String user,
+	public String userAuthentication(@RequestParam("email")String email,
 			@RequestParam("pass") String pass, Model model) throws UserException{
 		UserDAO client = new UserDAO();
-		
-		if((user !=null & pass != null) && (!user.equals("") && (!pass.equals(""))) && (client.isUserExcisting(user, pass)) ){
+		System.out.println("Stiga li do tuk (proverka user)" + email + " " + pass);
+		if(client.isUserExcisting(email, pass)){
 			return "Welcome";
 		} else {
-			model.addAttribute("text", "Username ot password - invalid."
+			model.addAttribute("text1", "Username ot password - invalid."
 					+ " Please check and try again!");
 			return "index";
 		}

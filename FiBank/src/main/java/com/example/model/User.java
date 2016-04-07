@@ -8,8 +8,8 @@ import org.hibernate.validator.constraints.NotBlank;
 
 public class User {
 	
-	@NotNull(message = "The id is compulsory!")
-	@NotBlank(message = "The id is compulsory!")
+	@NotNull(message = "The EGN/Bulstat is compulsory!")
+	@NotBlank(message = "The EGN/Bulstat is compulsory!")
 	@Size(min = 9, max = 10, message = "The id should be 9 signs for business and 10 signs for citizens!")
 
 	@Pattern(regexp = "[0-9]+", message = "The EGN/Bulstat has invalid characters!") 
@@ -147,11 +147,17 @@ public class User {
 	}
 
 	public TypesOfUsers getTypeOfUser() {
+		System.out.println("Stiga li do tuk getTypeOfUser()");
 		return typeOfUser;
 	}
 
 	public void setTypeOfUser(TypesOfUsers typeOfUser) {
-		this.typeOfUser = typeOfUser;
+		if(getId().length() == 9){
+			System.out.println(getId());
+			this.typeOfUser = TypesOfUsers.BUSINESS;
+		} else {
+			this.typeOfUser = TypesOfUsers.CITIZEN;
+		}
 	}
 	
 	

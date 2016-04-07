@@ -8,7 +8,7 @@ public class DBConnection {
 	
 	private static final String DB_PASSWORD = "root";
 	private static final String DB_USER = "root";
-	private static final String DATABASE = "internet_banking";
+	private static final String DATABASE = "internet_banking?useSSL=false";
 	private static final String DB_PORT = "3306"; 
 	private static final String DB_HOST = "127.0.0.1";
 	private static final String DB_URL = DB_HOST + ":" + DB_PORT;

@@ -10,4 +10,6 @@
 <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ModelAttribute"/>
 <fullyQualifiedTypeName name="com.example.model.UserDAO"/>
+<fullyQualifiedTypeName name="com.example.dao.UserDAO"/>
+<fullyQualifiedTypeName name="com.example.model.TypesOfUsers"/>
 </qualifiedTypeNameHistroy>

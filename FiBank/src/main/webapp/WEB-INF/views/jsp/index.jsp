@@ -10,7 +10,12 @@
             <form action="index" method="post" id="frmLogon" name="frmLogon">
               <h2 id="FrmH2">My Fibank</h2>
               <br>
-              ${text}
+              <div style="color: red">
+              ${text1}
+              </div>
+              <div>
+               ${text}
+               </div>
               <br>
               <fieldset style="font-family: 'Trebuchet MS', arial, sans-serif;">
                 <table style="width: 500px;">

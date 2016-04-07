@@ -13,9 +13,9 @@ import com.example.model.User;
 
 public class UserDAO extends AbstractDAO implements IUserDAO{
 	private static final String SELECT_USER_BY_ID_QUERY = "SELECT * FROM users WHERE id = ?";
-	private static final String SELECT_USER_BY_EMAIL_AND_PASSWORD_QUERY = "SELECT * FROM users WHERE username = ? AND password=?";
+	private static final String SELECT_USER_BY_EMAIL_AND_PASSWORD_QUERY = "SELECT * FROM users WHERE email = ? AND password=?";
 	private static final String DELETE_USER_QUERY = "DELETE FROM users WHERE id = ?";
-	private static final String ADD_USER_QUERY = "INSERT INTO users VALUES (?, ?, ?, ?, ?, ?, ?)";
+	private static final String ADD_USER_QUERY = "INSERT INTO users VALUES (?, ?, ?, ?, ?, ?, null)";
 	private static final String UPDATE_PASSWORD_QUERY = "UPDATE users SET password=? WHERE email2=?";
 	
 	/* (non-Javadoc)
@@ -32,7 +32,7 @@ public class UserDAO extends AbstractDAO implements IUserDAO{
 				ps.setString(4, user.getPhone());
 				ps.setString(5, user.getEmail());
 				ps.setString(6, user.getPassword());
-				ps.setString(7, user.getTypeOfUser().toString());
+				//ps.setString(7, user.getTypeOfUser().toString());
 				
 				ps.executeUpdate();
 
@@ -93,12 +93,16 @@ public class UserDAO extends AbstractDAO implements IUserDAO{
 	@Override
 	public boolean isUserExcisting(String email, String password) throws UserException{
 		if(email==null || password==null){
+			System.out.println("isUserExcisting - vrushta null lse proverkata v if-a");
 			return false;
 		}
+		
+		System.out.println("Stiga li do tukaaaa");
 		try{
 		PreparedStatement ps = getCon().prepareStatement(SELECT_USER_BY_EMAIL_AND_PASSWORD_QUERY);
 		ps.setString(1, email);
 		ps.setString(2, password);
+		System.out.println("printira li mail i pass v isUserExisting" + email+ " " + password);
 		ResultSet result = ps.executeQuery();
 		return result.next();
 	
