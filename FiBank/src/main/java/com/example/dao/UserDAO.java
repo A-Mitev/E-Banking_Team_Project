@@ -8,14 +8,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.example.exception.UserException;
-import com.example.model.TypesOfUsers;
 import com.example.model.User;
 
 public class UserDAO extends AbstractDAO implements IUserDAO{
 	private static final String SELECT_USER_BY_ID_QUERY = "SELECT * FROM users WHERE id = ?";
 	private static final String SELECT_USER_BY_EMAIL_AND_PASSWORD_QUERY = "SELECT * FROM users WHERE email = ? AND password=?";
 	private static final String DELETE_USER_QUERY = "DELETE FROM users WHERE id = ?";
-	private static final String ADD_USER_QUERY = "INSERT INTO users VALUES (?, ?, ?, ?, ?, ?, null)";
+	private static final String ADD_USER_QUERY = "INSERT INTO users VALUES (?, ?, ?, ?, ?, ?, ?)";
 	private static final String UPDATE_PASSWORD_QUERY = "UPDATE users SET password=? WHERE email2=?";
 	
 	/* (non-Javadoc)
@@ -32,7 +31,7 @@ public class UserDAO extends AbstractDAO implements IUserDAO{
 				ps.setString(4, user.getPhone());
 				ps.setString(5, user.getEmail());
 				ps.setString(6, user.getPassword());
-				//ps.setString(7, user.getTypeOfUser().toString());
+				ps.setString(7, user.getType());
 				
 				ps.executeUpdate();
 
@@ -78,9 +77,9 @@ public class UserDAO extends AbstractDAO implements IUserDAO{
 			String phone = result.getString(4);
 			String  email= result.getString(5);
 			String  password= result.getString(6);
-			TypesOfUsers typeOfUser = TypesOfUsers.valueOf(result.getString(7));	
+			String type = result.getString(7);	
 			
-			return new User(id, name, address, phone, email, password, typeOfUser);
+			return new User(id, name, address, phone, email, password, type);
 		} catch (SQLException e) {
 			e.printStackTrace();
 			throw new UserException("Can't find an user with ID : " + userId, e);
@@ -126,7 +125,7 @@ public class UserDAO extends AbstractDAO implements IUserDAO{
 		
 			while (resultSet.next()) {
 				User user = new User(resultSet.getString(1), resultSet.getString(2), resultSet.getString(3),resultSet.getString(4),
-						resultSet.getString(5),resultSet.getString(6),TypesOfUsers.valueOf(resultSet.getString(7)));
+						resultSet.getString(5),resultSet.getString(6), resultSet.getString(7));
 				usersList.add(user);
 			}
 			

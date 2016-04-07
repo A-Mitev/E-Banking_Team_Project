@@ -30,11 +30,17 @@ public class RegisterController{
 			
             return "Register";
         }
+		if(client.getId().length() == 9){
+			client.setType("Business");
+		} else {
+			client.setType("Private");
+		}
+		
+		
 		UserDAO newClient = new UserDAO();
-		 
 		newClient.addUser(client);
-		model.addAttribute("text", "Registration was successful!");
-		return "Register";
+		model.addAttribute("text", "Registration was successful!" + "\n" + "Please log in!");
+		return "index";
 	}	
 
 }

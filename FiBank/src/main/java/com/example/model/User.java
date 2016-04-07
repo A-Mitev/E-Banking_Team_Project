@@ -50,19 +50,20 @@ public class User {
 	
 
 
-	private TypesOfUsers typeOfUser;
+	private String type;
 	
 	public User() {
 	}
 
-	public User(String id,String name, String address, String phone, String email, String password, TypesOfUsers typeOfUser) {
+	public User(String id,String name, String address, String phone, String email, String password, String type) {
 		setId(id);
 		setName(name);
 		setAddress(address);
 		setPhone(phone);
 		setEmail(email);
 		setPassword(password);
-		setTypeOfUser(typeOfUser);
+		setType(type);
+		
 	}
 
 
@@ -146,19 +147,18 @@ public class User {
 	    }
 	}
 
-	public TypesOfUsers getTypeOfUser() {
-		System.out.println("Stiga li do tuk getTypeOfUser()");
-		return typeOfUser;
+	public String getType() {
+		return type;
 	}
 
-	public void setTypeOfUser(TypesOfUsers typeOfUser) {
-		if(getId().length() == 9){
-			System.out.println(getId());
-			this.typeOfUser = TypesOfUsers.BUSINESS;
-		} else {
-			this.typeOfUser = TypesOfUsers.CITIZEN;
-		}
+	public void setType(String type) {
+		this.type = type;
 	}
+
+	
+	
+
+
 	
 	
 
