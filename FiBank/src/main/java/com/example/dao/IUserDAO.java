@@ -13,7 +13,7 @@ public interface IUserDAO {
 
 	User getUserById(String userId) throws UserException;
 
-	boolean isUserExcisting(String email, String password) throws UserException;
+	User isUserExcisting(String email, String password) throws UserException;
 
 	List<User> getAllUsers() throws UserException;
 

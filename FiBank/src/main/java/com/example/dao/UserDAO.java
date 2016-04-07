@@ -90,20 +90,27 @@ public class UserDAO extends AbstractDAO implements IUserDAO{
 	 * @see com.example.model.IUserDAO#isUserExcisting(java.lang.String, java.lang.String)
 	 */
 	@Override
-	public boolean isUserExcisting(String email, String password) throws UserException{
+	public User isUserExcisting(String email, String password) throws UserException{
 		if(email==null || password==null){
-			System.out.println("isUserExcisting - vrushta null lse proverkata v if-a");
-			return false;
+			return null;
 		}
 		
-		System.out.println("Stiga li do tukaaaa");
 		try{
 		PreparedStatement ps = getCon().prepareStatement(SELECT_USER_BY_EMAIL_AND_PASSWORD_QUERY);
 		ps.setString(1, email);
 		ps.setString(2, password);
-		System.out.println("printira li mail i pass v isUserExisting" + email+ " " + password);
 		ResultSet result = ps.executeQuery();
-		return result.next();
+		result.next();
+		String id = result.getString(1);
+		String name = result.getString(2);
+		String address = result.getString(3);
+		String phone = result.getString(4);
+		String  tmpEmail= result.getString(5);
+		String  tmpPassword= result.getString(6);
+		String type = result.getString(7);	
+		
+		return new User(id, name, address, phone, tmpEmail, tmpPassword, type);
+		
 	
 	}
 		catch(SQLException e){
@@ -111,6 +118,7 @@ public class UserDAO extends AbstractDAO implements IUserDAO{
 			throw new UserException("Can't find out if a user with E-MAIL : "+email+
 					" and a PASSWORD : "+password+" is existing!");
 		}
+	
 	}
 	
 	/* (non-Javadoc)
