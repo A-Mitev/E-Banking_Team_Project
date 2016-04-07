@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.example.dao.UserDAO;
 import com.example.exception.UserException;
+import com.example.model.User;
 @Controller
 @RequestMapping(value="/index")
 public class LoginController extends HttpServlet {
@@ -32,13 +33,14 @@ public class LoginController extends HttpServlet {
 	public String userAuthentication(HttpServletRequest request,@RequestParam("email")String email,
 			@RequestParam("pass") String pass, Model model) throws UserException{
 		UserDAO client = new UserDAO();
-		System.out.println("Stiga li do tuk (proverka user)" + email + " " + pass);
-		if(client.isUserExcisting(email, pass)){
+		if(client.isUserExcisting(email, pass) != null){
+			String id = client.isUserExcisting(email, pass).getId();
+			String name = client.isUserExcisting(email, pass).getName();
 			HttpSession session = request.getSession();
-			session.setAttribute("test", email);
+			session.setAttribute("name", name);
+			session.setAttribute("id", id);
 			
-			System.out.println(session.getAttribute("test")+ "opaaaaaaaaaaaaaaa");
-			session.setMaxInactiveInterval(-1);
+			session.setMaxInactiveInterval(5);
 			
 			return "Welcome";
 		} else {

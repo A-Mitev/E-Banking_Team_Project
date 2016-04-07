@@ -24,7 +24,7 @@ public class AfterLoginController {
 	@RequestMapping(method = RequestMethod.GET)
 	public String showCustomerAccounts(HttpSession session, Model model)
 			throws AccountException, UserException, BankProductException {
-		if(session.getAttribute("test") == null){
+		if(session.getAttribute("id") == null){
 			model.addAttribute("text", "Hello, please login!");
 			session.invalidate();
 			return "index";
@@ -32,7 +32,8 @@ public class AfterLoginController {
 
 		AccountDAO accounts = new AccountDAO();
 		List acc = accounts.getAllAccounts();
-		model.addAttribute("user", session.getAttribute("test") );
+		model.addAttribute("name", "Hello  " + session.getAttribute("name"));
+		model.addAttribute("user", "Your id is " + session.getAttribute("id") );
 		return "Accounts";
 
 	}

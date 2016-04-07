@@ -8,9 +8,9 @@
 <title>Accounts</title>
 </head>
 <body>
-
+	<h1>${name}</h1>
+	<br/>
 	${user}
-<h1>Test</h1>
 
 </body>
 </html>
