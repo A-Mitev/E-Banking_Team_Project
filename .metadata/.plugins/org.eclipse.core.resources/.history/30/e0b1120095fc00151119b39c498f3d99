@@ -42,6 +42,9 @@ public class User {
 	
 	@NotNull(message = "The password is compulsory!")
 	@NotBlank(message = "The password is compulsory!")
+
+	//@Pattern(regexp = "[^\\c]*", message = "The password has invalid characters!")
+
 	private String password;
 	
 

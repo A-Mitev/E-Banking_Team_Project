@@ -11,17 +11,22 @@ public class User {
 	@NotNull(message = "The id is compulsory!")
 	@NotBlank(message = "The id is compulsory!")
 	@Size(min = 9, max = 10, message = "The id should be 9 signs for business and 10 signs for citizens!")
-
+<<<<<<< HEAD
 	@Pattern(regexp = "[0-9]+", message = "The EGN/Bulstat has invalid characters!") 
-
+=======
+	@Pattern(regexp = "[0-9]*", message = "The name has invalid characters!") 
+>>>>>>> 0bae3a29f37cd86c417b0a4942a97820fe9d52c6
 	private String id;
 	
 	@NotNull(message = "The name is compulsory!")
 	@NotBlank(message = "The name is compulsory!")
-
+<<<<<<< HEAD
 	@Size(min = 2, max = 45, message = "The name should be between 2 and 45 signs!")
 	@Pattern(regexp = "[a-zA-Z]+", message = "The name has invalid characters!")
-
+=======
+	@Size(min = 2, max = 45, message = "The address should be between 2 and 45 signs!")
+	@Pattern(regexp = "[a-zA-Z\\c]*", message = "The name has invalid characters!")
+>>>>>>> 0bae3a29f37cd86c417b0a4942a97820fe9d52c6
 	private String name;
 	
 	@NotNull(message = "The address is compulsory!")
@@ -42,6 +47,9 @@ public class User {
 	
 	@NotNull(message = "The password is compulsory!")
 	@NotBlank(message = "The password is compulsory!")
+
+	//@Pattern(regexp = "[^\\c]*", message = "The password has invalid characters!")
+
 	private String password;
 	
 
