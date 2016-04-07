@@ -25,7 +25,6 @@ public class AfterLoginController {
 	public String showCustomerAccounts(HttpSession session, Model model)
 			throws AccountException, UserException, BankProductException {
 		if(session.getAttribute("test") == null){
-			model.addAttribute("text", "Hello, please login!");
 			session.invalidate();
 			return "index";
 		}

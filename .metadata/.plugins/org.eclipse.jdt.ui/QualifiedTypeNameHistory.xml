@@ -6,10 +6,18 @@
 <fullyQualifiedTypeName name="com.sun.research.ws.wadl.Request"/>
 <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
 <fullyQualifiedTypeName name="com.example.model.DBConnection"/>
-<fullyQualifiedTypeName name="com.example.model.User"/>
 <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
-<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ModelAttribute"/>
 <fullyQualifiedTypeName name="com.example.model.UserDAO"/>
-<fullyQualifiedTypeName name="com.example.dao.UserDAO"/>
 <fullyQualifiedTypeName name="com.example.model.TypesOfUsers"/>
+<fullyQualifiedTypeName name="com.example.dao.AccountDAO"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServlet"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+<fullyQualifiedTypeName name="com.example.dao.UserDAO"/>
+<fullyQualifiedTypeName name="io.undertow.server.session.Session"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ModelAttribute"/>
+<fullyQualifiedTypeName name="com.example.model.User"/>
+<fullyQualifiedTypeName name="org.springframework.web.bind.annotation.SessionAttributes"/>
+<fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 </qualifiedTypeNameHistroy>
