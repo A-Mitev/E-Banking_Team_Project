@@ -7,6 +7,7 @@ import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 
 public class User {
+	
 	@NotNull(message = "The id is compulsory!")
 	@NotBlank(message = "The id is compulsory!")
 	@Size(min = 9, max = 10, message = "The id should be 9 signs for business and 10 signs for citizens!")
@@ -40,11 +41,13 @@ public class User {
 	@Pattern(regexp = "[^\\c]*", message = "The password has invalid characters!")
 	private String password;
 	
+
+
 	private TypesOfUsers typeOfUser;
 	
 	public User() {
 	}
-	
+
 	public User(String id,String name, String address, String phone, String email, String password, TypesOfUsers typeOfUser) {
 		setId(id);
 		setName(name);
@@ -54,6 +57,7 @@ public class User {
 		setPassword(password);
 		setTypeOfUser(typeOfUser);
 	}
+
 
 	public static String hashPasswordWithMD5(String password) {
 		   try {
@@ -76,7 +80,7 @@ public class User {
 	public void setId(String id) {
 		this.id = id;
 	}
- 
+
 	public String getName() {
 		return name;
 	}
