@@ -17,6 +17,12 @@ background: #f1f5f6
     font-weight: bold;
 }
 
+password {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
 
 input[type=text] {
     width: 100%;
@@ -58,10 +64,6 @@ input[type=text] {
 		<label>Enter your password:</label>
 		<springForm:password path="password" />
 		<springForm:errors path="password" cssClass="error" />
-		<br />
-		<label>Repeat your password:</label>
-		<springForm:password path="repeatPassword" />
-		<springForm:errors path="repeatPassword" cssClass="error" />
 		<br />
 		<br />
 		<input type="submit" value="Register as new client!" />

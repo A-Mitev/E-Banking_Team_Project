@@ -42,7 +42,6 @@ public class User {
 	
 	@NotNull(message = "The password is compulsory!")
 	@NotBlank(message = "The password is compulsory!")
-//	@Pattern(regexp = "[^\\s-]", message = "The passwor must be without spaces!")
 	private String password;
 	
 	@NotNull(message="not match")

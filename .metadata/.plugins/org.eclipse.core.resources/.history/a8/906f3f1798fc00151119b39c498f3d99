@@ -42,11 +42,7 @@ public class User {
 	
 	@NotNull(message = "The password is compulsory!")
 	@NotBlank(message = "The password is compulsory!")
-//	@Pattern(regexp = "[^\\s-]", message = "The passwor must be without spaces!")
 	private String password;
-	
-	@NotNull(message="not match")
-	private String repeatPassword;
 	
 
 
@@ -123,27 +119,9 @@ public class User {
 	public String getPassword() {
 		return password;
 	}
-	
-	public String getRepeatPassword() {
-		return repeatPassword;
-	}
 
 	public void setPassword(String password) {
 		this.password = password;
-		checkPassword();
-	}
-	
-	public void setRepeatPassword(String repeatPassword) {
-	    this.repeatPassword = repeatPassword;
-	    checkPassword();//check
-	}
-	
-	private void checkPassword() {
-	    if(this.password == null || this.repeatPassword == null){
-	        return;
-	    }else if(!this.password.equals(repeatPassword)){
-	        this.repeatPassword = null;
-	    }
 	}
 
 	public TypesOfUsers getTypeOfUser() {
@@ -153,7 +131,5 @@ public class User {
 	public void setTypeOfUser(TypesOfUsers typeOfUser) {
 		this.typeOfUser = typeOfUser;
 	}
-	
-	
 
 }
