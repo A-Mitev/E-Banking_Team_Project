@@ -1,5 +1,6 @@
 package com.example.controller;
 
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -8,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.example.exception.UserException;
 import com.example.model.User;
-import com.example.model.UserDAO;
+import com.example.dao.UserDAO;
 
 @Controller
 @RequestMapping(value = "/LostPassword")

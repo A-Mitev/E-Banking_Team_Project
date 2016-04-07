@@ -1,8 +1,7 @@
 <%@page import="javax.servlet.descriptor.TaglibDescriptor"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@ taglib prefix="springForm"
-	uri="http://www.springframework.org/tags/form"%>
+<%@ taglib prefix="springForm" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -11,6 +10,11 @@ fieldset{
 width:270px;
 border: 5px solid #cef1ff;
 background: #f1f5f6
+}
+.error {
+    color: #ff0000;
+    font-style: italic;
+    font-weight: bold;
 }
 
 input[type=text] {
@@ -32,21 +36,27 @@ input[type=text] {
 		<br/>
 		<label>Enter your EGN/Bulstat:</label>
 		<springForm:input type="text" path="id" />
+		<springForm:errors path="id" cssClass="error" />
 		<br />
 		<label>Enter your name:</label>
 		<springForm:input type="text" path="name" />
+		<springForm:errors path="name" cssClass="error" />
 		<br />
 		<label>Enter your address:</label>
 		<springForm:input type="text" path="address" />
+		<springForm:errors path="address" cssClass="error" />
 		<br />
 		<label>Enter your phone number:</label>
 		<springForm:input type="text" path="phone" />
+		<springForm:errors path="phone" cssClass="error" />
 		<br />
 		<label>Enter your email:</label>
 		<springForm:input type="text" path="email" />
+		<springForm:errors path="email" cssClass="error" />
 		<br />
 		<label>Enter your password:</label>
 		<springForm:input type="text" path="password" />
+		<springForm:errors path="password" cssClass="error" />
 		<br />
 		<br />
 		<input type="submit" value="Register as new client!" />

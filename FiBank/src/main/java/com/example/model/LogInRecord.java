@@ -4,15 +4,23 @@ import java.util.Date;
 
 public class LogInRecord {
 
+	private int id;
+	private Date date;
 	private User user;
 	private String ip;
-	private Date date;
 	
 	
-	public LogInRecord(User user, String ip, Date date) {
-		this.user = user;
-		this.ip = ip;
-		this.date = date;
+	
+	public LogInRecord(Date date, User user, String ip) {
+		setDate(date);
+		setUser(user);
+		setIp(ip);
+		
+	}
+	
+	public LogInRecord(Date date, User user, String ip, int id) {
+		this(date, user, ip);
+		this.id=id;
 	}
 	
 	public User getUser() {
@@ -33,6 +41,9 @@ public class LogInRecord {
 	public void setDate(Date date) {
 		this.date = date;
 	}
-	
+
+	public int getId() {
+		return id;
+	}
 	
 }

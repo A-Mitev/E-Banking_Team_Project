@@ -3,21 +3,26 @@ package com.example.model;
 import java.util.Date;
 
 public class Transaction {
+	private int id;
 	private User sender;
 	private User receiver;
-	private double sum;
 	private String currency;
 	private String ipOfSender;
+	private double sum;
 	private Date date;
 	
-	public Transaction(User sender, User receiver, double sum, String currency,
-			String ipOfSender, Date date) {
-		this.sender = sender;
-		this.receiver = receiver;
-		this.sum = sum;
-		this.currency = currency;
-		this.ipOfSender = ipOfSender;
-		this.setDate(date);
+	public Transaction(User sender, User receiver, String currency, String ipOfSender,double sum,  Date date) {
+		setSender(sender);
+		setReceiver(receiver);
+		setCurrency(currency);
+		setIpOfSender(ipOfSender);
+		setSum(sum);
+		setDate(date);
+	}
+	
+	public Transaction(User sender, User receiver, String currency, String ipOfSender, double sum,  Date date, int id) {
+		this(sender, receiver, currency, ipOfSender, sum, date);
+		this.id=id;
 	}
 	
 	public User getSender() {
@@ -57,6 +62,10 @@ public class Transaction {
 
 	public void setDate(Date date) {
 		this.date = date;
+	}
+
+	public int getId() {
+		return id;
 	}
 
 }

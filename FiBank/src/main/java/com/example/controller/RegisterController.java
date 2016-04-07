@@ -1,14 +1,17 @@
 package com.example.controller;
 
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.example.dao.UserDAO;
 import com.example.exception.UserException;
 import com.example.model.User;
-import com.example.model.UserDAO;
 
 @Controller
 @RequestMapping(value="/Reg")
@@ -22,11 +25,17 @@ public class RegisterController{
 	}	
 	
 	@RequestMapping(method = RequestMethod.POST)
-	public String addClient(@ModelAttribute User client, Model model) throws UserException{
+	public String addClient(User client,@ModelAttribute("user")@Valid User user,BindingResult bindingResult, Model model) throws UserException{
+		if (bindingResult.hasErrors()) {
+			
+            return "Register";
+        }
 		UserDAO newClient = new UserDAO();
+		 
 		newClient.addUser(client);
 		model.addAttribute("text", "Registration was successful!");
 		return "Register";
 	}	
 
 }
+
