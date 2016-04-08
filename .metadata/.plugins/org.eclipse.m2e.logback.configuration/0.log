@@ -2855,3 +2855,8 @@
 2016-04-07 22:25:16,244 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
 2016-04-07 22:25:16,249 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2016-04-07 22:25:16,249 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Asus\Documents\GitHub\E-Banking\FiBank\src\test\resources
+2016-04-08 08:17:50,985 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-08 08:17:50,995 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 1 resource
+2016-04-08 08:17:51,009 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2016-04-08 08:17:51,020 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2016-04-08 08:17:51,020 [Worker-6] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\Asus\Documents\GitHub\E-Banking\FiBank\src\test\resources
