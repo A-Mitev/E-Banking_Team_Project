@@ -1,55 +1,70 @@
-<%@page import="javax.servlet.descriptor.TaglibDescriptor"%>
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib prefix="springForm" uri="http://www.springframework.org/tags/form" %>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+ pageEncoding="ISO-8859-1"%>
+ <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+ <%@ taglib prefix="springForm" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-<style> 
-fieldset{
-width:270px;
-border: 5px solid #cef1ff;
-background: #f1f5f6
-}
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Add new account</title>
+<style>
 .error {
-    color: #ff0000;
-    font-style: italic;
-    font-weight: bold;
+ color: #ff0000;
 }
-
-
-input[type=text] {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
+ 
+.commonerrorblock {
+ color: #000;
+ background-color: #ffEEEE;
+ border: 3px solid #ff0000;
+ 
 }
 </style>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Register Page</title>
 </head>
 <body>
 <jsp:include page="Home.jsp"></jsp:include>
 <div align="center">
-	<br />
-	<springForm:form method="post" commandName="user" >
-	<fieldset>
-		<legend>Opening new account: </legend>
-		<br/>
-		<label>Choose a product:</label>
-		 <select name="bank products">
-           <option value="bankpr1">bankpr1</option>
-           <option value="bankpr1">bankpr1</option>
-         </select>
-		<label>Choose currency:</label>
-		<select name="curr">
-           <option value="curr1">bankpr1</option>
-           <option value="curr2">bankpr1</option>
-         </select>
-		<label>Enter initial sum:</label>
-		<input type="number" value="sum" />
-		<input type="submit" value="Open an account!" />
-		</fieldset>
-	</springForm:form>
-	</div>
+${text}
+ <form:form method="post"  commandName="combined">
+ <form:errors path="*" element="div" cssClass="commonerrorblock"/>
+ <table>
+ <tr>
+ <td>Bank products: </td>
+ <td>
+ <form:select path="description">
+ <form:option value="" />
+ <form:options items="${bankProducts}"/>
+ </form:select>
+ </td>
+ <td>
+ <form:errors path="description" cssClass="error"/>
+ </td>
+ </tr>
+ <tr>
+ <td>Currency: </td>
+ <td>
+ <form:select path="currency">
+ <form:option value="" />
+ <form:options items="${currency}"/>
+ </form:select>
+ </td>
+ <td>
+ <form:errors path="description" cssClass="error"/>
+ </td>
+ </tr>
+  <tr>
+ <td>Initial sum: </td>
+ <td>
+ <form:input type="number" path="currency"/>
+ </td>
+ <td>
+ <form:errors path="currency" cssClass="error"/>
+ </td>
+ </tr>
+ <tr>
+ <td></td><td><input type="submit" value="Add new account!"></td>
+ </tr>
+ </table>	
+ </form:form>
+ </div>
 </body>
+</html>
