@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class DBConnection {
 	
-	private static final String DB_PASSWORD = "emag";
+	private static final String DB_PASSWORD = "root";
 	private static final String DB_USER = "root";
 	private static final String DATABASE = "internet_banking?useSSL=false";
 	private static final String DB_PORT = "3306"; 

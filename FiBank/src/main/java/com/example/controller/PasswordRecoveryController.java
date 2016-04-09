@@ -1,11 +1,12 @@
 package com.example.controller;
 
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.exception.UserException;
 import com.example.model.User;
@@ -15,32 +16,32 @@ import com.example.dao.UserDAO;
 @RequestMapping(value = "/LostPassword")
 public class PasswordRecoveryController {
 
-	@RequestMapping(method = RequestMethod.GET)
+	@RequestMapping( method = RequestMethod.GET)
 	public String lostPassword(Model model) {
 		User client = new User();
 		model.addAttribute("ressetPassClient", client);
-		return "PassReset";
+		return "PassResetEmailConfirmation";
 	}
 
 	@RequestMapping(method = RequestMethod.POST)
-	public String passwordReset(@ModelAttribute User client, Model model) throws UserException {
+	public String emailCheck(HttpServletRequest request, @RequestParam("email") String email, Model model)
+			throws UserException {
 		UserDAO existingClient = (UserDAO) new UserDAO();
-
-		// public boolean isExistingEmail(existingClient.getAllUsers(),
-		// client.getEmail()) {
-		// // Iterates all the users
-		// for (User user: usersList) {
-		// // Checks if the user email is equal to the email parameter
-		// if (user.email.equals(email)) {
-		// return true;
-		// }
-		// }
-
-		// samo za test, da iztriq!
-		System.out.println(client.getEmail() + " " + client.getPassword());
-
-		existingClient.updadeUserPassword(client.getEmail(), client.getPassword());
-
-		return "PassReset";
+		System.out.println("Stiga li do proverka na email");
+		if (existingClient.isEmailExcisting(email)) {
+			System.out.println(existingClient.isEmailExcisting(email));
+			System.out.println("vliza li v if-a");
+			System.out.println("minava li proverka na email");
+			User client = new User();
+			model.addAttribute("ressetPassClient", client);
+			model.addAttribute("hello", "Welcome " + " " + email);
+			return "PassResetCodeConfirmation";
+		} else {
+			System.out.println("Minava li sled if-a");
+			User client = new User();
+			model.addAttribute("ressetPassClient", client);
+			model.addAttribute("message", "This is unregistered mail!");
+			return "PassResetEmailConfirmation";
+		}
 	}
 }

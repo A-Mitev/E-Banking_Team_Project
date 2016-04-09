@@ -14,34 +14,41 @@ import com.example.exception.UserException;
 import com.example.model.User;
 
 @Controller
-@RequestMapping(value="/Reg")
-public class RegisterController{
-	
+@RequestMapping(value = "/Reg")
+public class RegisterController {
+
 	@RequestMapping(method = RequestMethod.GET)
-	public String clientRegister(Model model){
-	User client = new User();
-	model.addAttribute("user", client);
+	public String clientRegister(Model model) {
+		User client = new User();
+		model.addAttribute("user", client);
 		return "Register";
-	}	
-	
+	}
+
 	@RequestMapping(method = RequestMethod.POST)
-	public String addClient(User client,@ModelAttribute("user")@Valid User user,BindingResult bindingResult, Model model) throws UserException{
+	public String addClient(User client, @ModelAttribute("user") @Valid User user, BindingResult bindingResult,
+			Model model) throws UserException {
 		if (bindingResult.hasErrors()) {
-			
-            return "Register";
-        }
-		if(client.getId().length() == 9){
+
+			return "Register";
+		}
+		if (client.getId().length() == 9) {
 			client.setType("Business");
 		} else {
 			client.setType("Private");
 		}
-		
-		
+
+		long code = client.getEmail().hashCode() + (client.getEmail().hashCode() * (int) (Math.random() * 99));
+		if (code < 0) {
+			code *= -1;
+		}
+		System.out
+				.println(client.getEmail().hashCode() + (int) (Math.random() * 99) + " " + "TOva e genenriraniq cod!");
+		client.setCode(code);
+
 		UserDAO newClient = new UserDAO();
 		newClient.addUser(client);
 		model.addAttribute("text", "Registration was successful!" + "\n" + "Please log in!");
 		return "index";
-	}	
+	}
 
 }
-

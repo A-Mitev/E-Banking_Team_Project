@@ -1,0 +1,38 @@
+package com.example.controller;
+
+
+import javax.servlet.http.HttpServletRequest;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.example.exception.UserException;
+import com.example.model.User;
+import com.example.dao.UserDAO;
+
+@Controller
+public class PasswordRecoveryController {
+
+	@RequestMapping(value = "/LostPassword", method = RequestMethod.GET)
+	public String lostPassword(Model model) {
+		User client = new User();
+		model.addAttribute("ressetPassClient", client);
+		return "PassResetEmailConfirmation";
+	}
+
+	@RequestMapping(value = "/LostPassword", method = RequestMethod.POST)
+	public String emailCheck(HttpServletRequest request,@RequestParam("email")String email, Model model) throws UserException {
+		UserDAO existingClient = (UserDAO) new UserDAO();
+		
+		if(existingClient.isEmailExcisting(email)){
+			
+			return "PassResetCodeConfirmation";
+		}
+		
+
+		return "PassResetEmailConfirmation";
+	}
+}

@@ -18,5 +18,7 @@ public interface IUserDAO {
 	List<User> getAllUsers() throws UserException;
 
 	String updadeUserPassword(String email, String newPassword) throws UserException;
+	
+	public boolean isEmailExcisting(String email) throws UserException;
 
 }

@@ -29,6 +29,7 @@ input[type=text] {
 <title>Register Page</title>
 </head>
 <body>
+<div align="center">
 	 ${text}
 	<br />
 	<springForm:form method="post" commandName="user" >
@@ -67,5 +68,6 @@ input[type=text] {
 		<input type="submit" value="Register as new client!" />
 		</fieldset>
 	</springForm:form>
+	</div>
 </body>
 </html>

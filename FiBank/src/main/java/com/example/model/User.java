@@ -48,10 +48,10 @@ public class User {
 	@NotNull(message="not match")
 	private String repeatPassword;
 	
-
-
 	private String type;
 	
+	private long code;
+
 	public User() {
 	}
 
@@ -156,7 +156,13 @@ public class User {
 	}
 
 	
-	
+	public long getCode() {
+		return code;
+	}
+
+	public void setCode(long code) {
+		this.code = code;
+	}
 
 
 	

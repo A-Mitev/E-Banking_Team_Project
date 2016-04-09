@@ -24,3 +24,10 @@
 1459918748869	Rename resource 'Welcome.jsp'
 1459918866277	Rename resource 'PassReset.jsp'
 1460029952881	Delete element
+1460203526169	Rename resource 'PassReset.jsp'
+1460204967522	Extract constant 'SELECT_FROM_USERS_WHERE_EMAIL'
+1460205231726	Rename method 'isUserExcisting'
+1460207769915	Rename resource 'PassResetCodeConfirmationjsp.jsp'
+1460210168534	Rename type 'PasswordRecoveryController'
+1460211031533	Delete element
+1460211040094	Rename type 'PasswordRecoveryEmailCheckController'
