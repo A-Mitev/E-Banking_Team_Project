@@ -11,12 +11,13 @@ import com.example.exception.UserException;
 import com.example.model.User;
 
 public class UserDAO extends AbstractDAO implements IUserDAO {
+	private static final String SELECT_FROM_USERS_WHERE_EMAIL_AND_CODE = "SELECT * FROM users WHERE email = ? AND code=?";
 	private static final String SELECT_FROM_USERS_WHERE_EMAIL = "SELECT * FROM users WHERE email = ?";
 	private static final String SELECT_USER_BY_ID_QUERY = "SELECT * FROM users WHERE id = ?";
 	private static final String SELECT_USER_BY_EMAIL_AND_PASSWORD_QUERY = "SELECT * FROM users WHERE email = ? AND password=?";
 	private static final String DELETE_USER_QUERY = "DELETE FROM users WHERE id = ?";
 	private static final String ADD_USER_QUERY = "INSERT INTO users VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
-	private static final String UPDATE_PASSWORD_QUERY = "UPDATE users SET password=? WHERE email2=?";
+	private static final String UPDATE_PASSWORD_QUERY = "UPDATE users SET password=? WHERE email=?";
 
 	/*
 	 * (non-Javadoc)
@@ -167,8 +168,8 @@ public class UserDAO extends AbstractDAO implements IUserDAO {
 		if (email != null && newPassword != null) {
 			try {
 				PreparedStatement ps = getCon().prepareStatement(UPDATE_PASSWORD_QUERY);
-				ps.setString(1, email);
-				ps.setString(2, newPassword);
+				ps.setString(1, newPassword);
+				ps.setString(2, email);
 
 				ps.executeUpdate();
 
@@ -192,6 +193,27 @@ public class UserDAO extends AbstractDAO implements IUserDAO {
 			ps.setString(1, email);
 			ResultSet result = ps.executeQuery();
 
+			if (result.next()) {
+				return true;
+			} else {
+				return false;
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+			throw new UserException("Unregistered mail : " + email);
+		}
+	}
+	
+	public boolean emailConfirmationCodeMatch(String email, String code) throws UserException {
+		if (email == null | code == null) {
+			return false;
+		}
+
+		try {
+			PreparedStatement ps = getCon().prepareStatement(SELECT_FROM_USERS_WHERE_EMAIL_AND_CODE);
+			ps.setString(1, email);
+			ps.setString(2, code);
+			ResultSet result = ps.executeQuery();
 			if (result.next()) {
 				return true;
 			} else {

@@ -1,6 +1,7 @@
 package com.example.controller;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -30,14 +31,14 @@ public class PasswordRecoveryController {
 		System.out.println("Stiga li do proverka na email");
 		if (existingClient.isEmailExcisting(email)) {
 			System.out.println(existingClient.isEmailExcisting(email));
-			System.out.println("vliza li v if-a");
-			System.out.println("minava li proverka na email");
+			HttpSession session = request.getSession();
+			session.setAttribute("email", email);
+			session.setMaxInactiveInterval(10);
 			User client = new User();
 			model.addAttribute("ressetPassClient", client);
 			model.addAttribute("hello", "Welcome " + " " + email);
 			return "PassResetCodeConfirmation";
 		} else {
-			System.out.println("Minava li sled if-a");
 			User client = new User();
 			model.addAttribute("ressetPassClient", client);
 			model.addAttribute("message", "This is unregistered mail!");

@@ -41,10 +41,6 @@ public class RegisterController {
 		if (code < 0) {
 			code *= -1;
 		}
-		System.out
-				.println(client.getEmail().hashCode() + (int) (Math.random() * 99) + " " + "TOva e genenriraniq cod!");
-		client.setCode(code);
-
 		UserDAO newClient = new UserDAO();
 		newClient.addUser(client);
 		model.addAttribute("text", "Registration was successful!" + "\n" + "Please log in!");

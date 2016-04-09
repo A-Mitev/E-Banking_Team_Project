@@ -16,6 +16,12 @@
               <div>
                ${text}
                </div>
+                <div>
+               ${noConfirmation}
+               </div>
+                 <div>
+               ${passChanged}
+               </div>
               <br>
               <fieldset style="font-family: 'Trebuchet MS', arial, sans-serif;">
                 <table style="width: 500px;">

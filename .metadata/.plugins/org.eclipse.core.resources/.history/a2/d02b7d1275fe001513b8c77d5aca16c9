@@ -1,0 +1,39 @@
+package com.example.controller;
+
+import javax.validation.Valid;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.example.dao.UserDAO;
+import com.example.exception.UserException;
+import com.example.model.User;
+
+@Controller
+@RequestMapping(value = "/newPassword")
+public class NewPasswordController {
+	
+	@RequestMapping(method = RequestMethod.POST)
+	public String addClient(User client, @ModelAttribute("user1") @Valid User user, BindingResult bindingResult,
+			Model model) throws UserException {
+		System.out.println("Cskaaaaaaaaaaaa");
+		if (bindingResult.hasErrors()) {
+			return "PassworReset";
+		} 
+		System.out.println("samo levski ole");
+		UserDAO newPass = new UserDAO();
+		newPass.updadeUserPassword(client.getEmail(), client.getRepeatPassword());
+		
+		System.out.println(client.getEmail() + " " + client.getRepeatPassword());
+		model.addAttribute("passChanged","The passwor has been changed successfully!");
+		
+		return "index";
+	
+
+}
+}
+

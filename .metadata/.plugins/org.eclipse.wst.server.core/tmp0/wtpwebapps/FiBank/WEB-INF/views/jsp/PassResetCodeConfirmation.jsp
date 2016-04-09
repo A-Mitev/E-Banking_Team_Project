@@ -26,7 +26,7 @@ input[type=text] {
 		
 		${hello}
 		
-		<springForm:form action="./test" method="post" commandName="ressetPassClient">
+		<springForm:form action="./codeCheck" method="post" commandName="ressetPassClient">
 		<fieldset style="width:270px">
 		
 		<label>Please enter your confirmationCode!</label>

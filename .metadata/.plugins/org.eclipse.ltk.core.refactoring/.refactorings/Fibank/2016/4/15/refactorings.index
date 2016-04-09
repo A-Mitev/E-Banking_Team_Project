@@ -31,3 +31,4 @@
 1460210168534	Rename type 'PasswordRecoveryController'
 1460211031533	Delete element
 1460211040094	Rename type 'PasswordRecoveryEmailCheckController'
+1460217820197	Extract constant 'SELECT_FROM_USERS_WHERE_EMAIL_AND_CODE'
