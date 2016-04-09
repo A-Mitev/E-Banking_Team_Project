@@ -29,6 +29,7 @@ input[type=text] {
 <title>Register Page</title>
 </head>
 <body>
+<jsp:include page="Home.jsp"></jsp:include>
 <div align="center">
 	 ${text}
 	<br />
@@ -70,4 +71,3 @@ input[type=text] {
 	</springForm:form>
 	</div>
 </body>
-</html>

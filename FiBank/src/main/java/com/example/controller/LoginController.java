@@ -32,24 +32,22 @@ public class LoginController extends HttpServlet {
 	@RequestMapping(method = RequestMethod.POST)
 	public String userAuthentication(HttpServletRequest request,@RequestParam("email")String email,
 			@RequestParam("pass") String pass, Model model) throws UserException{
-		UserDAO client = new UserDAO();
-		if(client.isUserExcisting(email, pass) != null){
+		    UserDAO client = new UserDAO();
+		    if(client.isUserExcisting(email, pass) != null){
 			String id = client.isUserExcisting(email, pass).getId();
 			String name = client.isUserExcisting(email, pass).getName();
 			HttpSession session = request.getSession();
 			session.setAttribute("name", name);
 			session.setAttribute("id", id);
 			
-			session.setMaxInactiveInterval(5);
+			session.setMaxInactiveInterval(1);
 			
-			return "Welcome";
+			return "Home";
 		} else {
 			model.addAttribute("text1", "Username ot password - invalid."
 					+ " Please check and try again!");
 			return "index";
 		}
 	}
-	
-	
 	
 }
