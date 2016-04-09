@@ -20,4 +20,6 @@
 <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
 <fullyQualifiedTypeName name="com.example.dao.UserDAO"/>
 <fullyQualifiedTypeName name="com.example.model.User"/>
+<fullyQualifiedTypeName name="java.lang.Math"/>
+<fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
 </qualifiedTypeNameHistroy>
