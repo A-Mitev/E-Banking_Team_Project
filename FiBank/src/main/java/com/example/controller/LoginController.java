@@ -39,8 +39,9 @@ public class LoginController extends HttpServlet {
 			HttpSession session = request.getSession();
 			session.setAttribute("name", name);
 			session.setAttribute("id", id);
+			session.setAttribute("user", client.isUserExcisting(email, pass));
 			
-			session.setMaxInactiveInterval(1);
+			session.setMaxInactiveInterval(60);
 			
 			return "Home";
 		} else {

@@ -11,8 +11,8 @@ import com.example.exception.BankProductException;
 import com.example.model.BankProduct;
 
 public class BankProductDAO extends AbstractDAO implements IBankProductDAO {
-	private static final String SELECT_BANK_PRODUCT_BY_ID_QUERY = "SELECT * FROM bank_products WHERE id = ?";
-	private static final String DELETE_BANK_PRODUCT_QUERY = "DELETE FROM bank_products WHERE id = ?";
+	private static final String SELECT_BANK_PRODUCT_BY_ID_QUERY = "SELECT * FROM bank_products WHERE id_bank_product = ?";
+	private static final String DELETE_BANK_PRODUCT_QUERY = "DELETE FROM bank_products WHERE id_bank_product = ?";
 	private static final String ADD_BANK_PRODUCT_QUERY = "INSERT INTO bank_products VALUES (null, ?,?,?,?)";
 
 	/* (non-Javadoc)

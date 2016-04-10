@@ -8,6 +8,7 @@ import javax.validation.constraints.Size;
 import org.hibernate.validator.constraints.NotBlank;
 
 public class BankProduct {
+	
 	private int id;
 	
 	@NotNull(message = "The name of the product is compulsory!")
@@ -75,6 +76,12 @@ public class BankProduct {
 	
 	public int getId(){
 		return id;
+	}
+
+	@Override
+	public String toString() {
+		return "BankProduct: type=" + name + ", interest=" + interest + "% , minimal sum=" + minSum + ", period="
+				+ periodInMonths + " months";
 	}
 
 }

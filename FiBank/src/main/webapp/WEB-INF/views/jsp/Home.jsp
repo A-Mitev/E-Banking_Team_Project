@@ -39,7 +39,7 @@ body {background-color: #f1f5f6;}
                             <li><a href="#">Delete An Account</a></li>
                         </ul>
                     </li>
-					<li class="active"><a href="#">Transfer Money</a></li>
+					<li class="active"><a href="./Transaction">Transfer Money</a></li>
 					<li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">History <span class="caret"></span></a>
                         <ul class="dropdown-menu">

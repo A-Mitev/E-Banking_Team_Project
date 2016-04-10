@@ -31,8 +31,8 @@ public class TransactionDAO extends AbstractDAO implements ITransactionDAO {
 			try {
 				PreparedStatement ps = getCon().prepareStatement(ADD_TRANSACION_QUERY,
 						PreparedStatement.RETURN_GENERATED_KEYS);
-				ps.setString(1, transaction.getSender().getId());
-				ps.setString(2, transaction.getReceiver().getId());
+				ps.setString(1, transaction.getIbanSender());
+				ps.setString(2, transaction.getIbanReceiver());
 				ps.setString(3, transaction.getCurrency());
 				ps.setString(4, transaction.getIpOfSender());
 				ps.setDouble(5, transaction.getSum());
@@ -111,9 +111,8 @@ public class TransactionDAO extends AbstractDAO implements ITransactionDAO {
 			ResultSet result = ps.executeQuery();
 			result.next();
 			int id = result.getInt(1);
-			IUserDAO userDAO = new UserDAO();
-			User sender = userDAO.getUserById(result.getString(2));
-			User receiver = userDAO.getUserById(result.getString(3));
+			String sender = result.getString(2);
+			String receiver = result.getString(3);
 			String currency = result.getString(4);
 			String ipOfSender = result.getString(5);
 			Double sum = result.getDouble(6);
@@ -140,9 +139,8 @@ public class TransactionDAO extends AbstractDAO implements ITransactionDAO {
 			while (resultSet.next()) {
 
 				int id = resultSet.getInt(1);
-				IUserDAO userDAO = new UserDAO();
-				User sender = userDAO.getUserById(resultSet.getString(2));
-				User receiver = userDAO.getUserById(resultSet.getString(3));
+				String sender = resultSet.getString(2);
+				String receiver = resultSet.getString(3);
 				String currency = resultSet.getString(4);
 				String ipOfSender = resultSet.getString(5);
 				Double sum = resultSet.getDouble(6);
@@ -175,9 +173,8 @@ public class TransactionDAO extends AbstractDAO implements ITransactionDAO {
 
 			while (resultSet.next()) {
 				int id = resultSet.getInt(1);
-				IUserDAO userDAO = new UserDAO();
-				User sender = userDAO.getUserById(resultSet.getString(2));
-				User receiver = userDAO.getUserById(resultSet.getString(3));
+				String sender = resultSet.getString(2);
+				String receiver = resultSet.getString(3);
 				String currency = resultSet.getString(4);
 				String ipOfSender = resultSet.getString(5);
 				Double sum = resultSet.getDouble(6);
@@ -207,9 +204,8 @@ public class TransactionDAO extends AbstractDAO implements ITransactionDAO {
 
 			while (resultSet.next()) {
 				int id = resultSet.getInt(1);
-				IUserDAO userDAO = new UserDAO();
-				User sender = userDAO.getUserById(resultSet.getString(2));
-				User receiver = userDAO.getUserById(resultSet.getString(3));
+				String sender =resultSet.getString(2);
+				String receiver = resultSet.getString(3);
 				String currency = resultSet.getString(4);
 				String ipOfSender = resultSet.getString(5);
 				Double sum = resultSet.getDouble(6);

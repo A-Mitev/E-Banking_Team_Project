@@ -1,42 +1,36 @@
 package com.example.model;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Transaction {
 	private int id;
-	private User sender;
-	private User receiver;
+	private String ibanSender;
+	private String ibanReceiver;
 	private String currency;
 	private String ipOfSender;
 	private double sum;
 	private Date date;
 	
-	public Transaction(User sender, User receiver, String currency, String ipOfSender,double sum,  Date date) {
-		setSender(sender);
-		setReceiver(receiver);
+	public Transaction() {
+		
+	}
+	
+	public Transaction(String ibanSender, String ibanReceiver, String currency, String ipOfSender,double sum,  Date date) {
+		setIbanSender(ibanSender);
+		setIbanReceiver(ibanReceiver);
 		setCurrency(currency);
 		setIpOfSender(ipOfSender);
 		setSum(sum);
 		setDate(date);
 	}
 	
-	public Transaction(User sender, User receiver, String currency, String ipOfSender, double sum,  Date date, int id) {
-		this(sender, receiver, currency, ipOfSender, sum, date);
+	public Transaction(String ibanSender, String ibanReceiver, String currency, String ipOfSender,double sum,  Date date, int id) {
+		this(ibanSender, ibanReceiver, currency, ipOfSender, sum, date);
 		this.id=id;
 	}
 	
-	public User getSender() {
-		return sender;
-	}
-	public void setSender(User sender) {
-		this.sender = sender;
-	}
-	public User getReceiver() {
-		return receiver;
-	}
-	public void setReceiver(User receiver) {
-		this.receiver = receiver;
-	}
+	
+
 	public double getSum() {
 		return sum;
 	}
@@ -66,6 +60,22 @@ public class Transaction {
 
 	public int getId() {
 		return id;
+	}
+
+	public String getIbanSender() {
+		return ibanSender;
+	}
+
+	public void setIbanSender(String ibanSender) {
+		this.ibanSender = ibanSender;
+	}
+
+	public String getIbanReceiver() {
+		return ibanReceiver;
+	}
+
+	public void setIbanReceiver(String ibanReceiver) {
+		this.ibanReceiver = ibanReceiver;
 	}
 
 }

@@ -31,7 +31,6 @@ ${text}
  <td>Bank products: </td>
  <td>
  <form:select path="description">
- <form:option value="" />
  <form:options items="${bankProducts}"/>
  </form:select>
  </td>
@@ -43,21 +42,20 @@ ${text}
  <td>Currency: </td>
  <td>
  <form:select path="currency">
- <form:option value="" />
  <form:options items="${currency}"/>
  </form:select>
  </td>
  <td>
- <form:errors path="description" cssClass="error"/>
+ <form:errors path="currency" cssClass="error"/>
  </td>
  </tr>
   <tr>
  <td>Initial sum: </td>
  <td>
- <form:input type="number" path="currency"/>
+ <form:input type="number" path="sum"/>
  </td>
  <td>
- <form:errors path="currency" cssClass="error"/>
+ <form:errors path="sum" cssClass="error"/>
  </td>
  </tr>
  <tr>

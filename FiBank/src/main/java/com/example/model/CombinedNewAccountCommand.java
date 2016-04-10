@@ -9,15 +9,12 @@ import org.hibernate.validator.constraints.NotBlank;
 public class CombinedNewAccountCommand {
 
 	@NotNull(message = "The choise of bank product is compulsory!")
-	@NotBlank(message = "The choise of bank product is compulsory!")
 	private String description;
 	
 	@NotNull(message = "The choise of currency is compulsory!")
-	@NotBlank(message = "The choise of currency is compulsory!")
 	private String currency;
 	
 	@NotNull(message = "The intial sum is compulsory!")
-	@NotBlank(message = "The initial sum is compulsory!")
 	@Min(0)
 	@Max(50000)
 	private Integer sum;

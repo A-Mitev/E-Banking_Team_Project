@@ -1,6 +1,6 @@
 package com.example.model;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Account {
 	private String iban;
@@ -10,17 +10,22 @@ public class Account {
 	private Date dateOfCreation;
 	private BankProduct product;
 	
+	public Account() {
+		
+	}
 	
-	public Account(String iban, double balance, String currency, User accountHolder,  Date dateOfCreation,
+	public Account(String iban, double balance, String currency, User accountHolder, Date date,
 			BankProduct product) {
 		setIban(iban);
 		setBalance(balance);
 		setCurrency(currency);
 		setAccountHolder(accountHolder);
-		setDateOfCreation(dateOfCreation);
+		setDateOfCreation(date);
 		setProduct(product);
 	}
 	
+	
+
 	public String getIban() {
 		return iban;
 	}
