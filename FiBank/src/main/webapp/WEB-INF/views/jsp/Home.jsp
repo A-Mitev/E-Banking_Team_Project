@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>FiBank: Home</title>
+<title>Home</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -35,8 +35,7 @@ body {background-color: #f1f5f6;}
                             <li><a href="#">Check Balance</a></li>
 							<li role="separator" class="divider"></li>
                             <li><a href="./NewAccount">Add An Account</a></li>
-							<li role="separator" class="divider"></li>
-                            <li><a href="#">Delete An Account</a></li>
+			
                         </ul>
                     </li>
 					<li class="active"><a href="./Transaction">Transfer Money</a></li>
@@ -44,7 +43,7 @@ body {background-color: #f1f5f6;}
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">History <span class="caret"></span></a>
                         <ul class="dropdown-menu">
 						    <li role="separator" class="divider"></li>
-                            <li><a href="#">Transfer History</a></li>
+                            <li><a href="./TransactionHistory">Transfer History</a></li>
 							<li role="separator" class="divider"></li>
                             <li><a href="#">Log In History</a></li>
                         </ul>

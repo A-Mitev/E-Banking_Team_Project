@@ -16,7 +16,7 @@ import com.example.model.BankProduct;
 import com.example.model.User;
 
 public class AccountDAO extends AbstractDAO implements IAccountDAO {
-	private static final String SELECT_ACCOUNT_BY_IBAN_QUERY = "SELECT * FROM accounts WHERE id = ?";
+	private static final String SELECT_ACCOUNT_BY_IBAN_QUERY = "SELECT * FROM accounts WHERE iban = ?";
 	private static final String SELECT_ACCOUNT_BY_ACCOUNT_HOLDER_QUERY = "SELECT * FROM accounts WHERE account_holder = ?";
 	private static final String ADD_ACCOUNT_QUERY = "INSERT INTO accounts VALUES (?, ?, ?, ?, ?, ?)";
 	private static final String DELETE_ACCOUNT_QUERY = "DELETE FROM accounts WHERE iban = ?";
@@ -27,6 +27,7 @@ public class AccountDAO extends AbstractDAO implements IAccountDAO {
 	 */
 	@Override
 	public String addAccount(Account acc) throws AccountException {
+		System.err.println(acc);
 		if (acc != null) {
 			try {
 				PreparedStatement ps = getCon().prepareStatement(ADD_ACCOUNT_QUERY);
@@ -163,8 +164,8 @@ public class AccountDAO extends AbstractDAO implements IAccountDAO {
 		if (accIban != null) {
 			try {
 				PreparedStatement ps = getCon().prepareStatement(UPDATE_BALANCE_QUERY);
-				ps.setString(1, accIban);
-				ps.setDouble(2, newBalance);
+				ps.setDouble(1, newBalance);
+				ps.setString(2, accIban);
 				
 				ps.executeUpdate();
 

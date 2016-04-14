@@ -19,6 +19,8 @@ public interface IUserDAO {
 
 	String updadeUserPassword(String email, String newPassword) throws UserException;
 	
-	public boolean isEmailExcisting(String email) throws UserException;
+    boolean isEmailExcisting(String email) throws UserException;
+
+	boolean emailConfirmationCodeMatch(String email, String code) throws UserException;
 
 }

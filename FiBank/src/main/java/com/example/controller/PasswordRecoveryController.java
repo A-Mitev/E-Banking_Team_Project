@@ -11,11 +11,14 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.exception.UserException;
 import com.example.model.User;
+import com.example.dao.IUserDAO;
 import com.example.dao.UserDAO;
 
 @Controller
 @RequestMapping(value = "/LostPassword")
 public class PasswordRecoveryController {
+
+	private static final int MAX_INACTIVE_INTERVAL = 60;
 
 	@RequestMapping( method = RequestMethod.GET)
 	public String lostPassword(Model model) {
@@ -26,23 +29,26 @@ public class PasswordRecoveryController {
 
 	@RequestMapping(method = RequestMethod.POST)
 	public String emailCheck(HttpServletRequest request, @RequestParam("email") String email, Model model)
-			throws UserException {
-		UserDAO existingClient = (UserDAO) new UserDAO();
-		System.out.println("Stiga li do proverka na email");
-		if (existingClient.isEmailExcisting(email)) {
-			System.out.println(existingClient.isEmailExcisting(email));
-			HttpSession session = request.getSession();
-			session.setAttribute("email", email);
-			session.setMaxInactiveInterval(10);
-			User client = new User();
-			model.addAttribute("ressetPassClient", client);
-			model.addAttribute("hello", "Welcome " + " " + email);
-			return "PassResetCodeConfirmation";
-		} else {
-			User client = new User();
-			model.addAttribute("ressetPassClient", client);
-			model.addAttribute("message", "This is unregistered mail!");
-			return "PassResetEmailConfirmation";
+			 {
+		IUserDAO existingClient = (UserDAO) new UserDAO();
+		try {
+			if (existingClient.isEmailExcisting(email)) {
+				System.out.println(existingClient.isEmailExcisting(email));
+				HttpSession session = request.getSession();
+				session.setAttribute("email", email);
+				session.setMaxInactiveInterval(MAX_INACTIVE_INTERVAL);
+				User client = new User();
+				model.addAttribute("ressetPassClient", client);
+				model.addAttribute("hello", "Welcome " + " " + email);
+				return "PassResetCodeConfirmation";
+			} else {
+				User client = new User();
+				model.addAttribute("ressetPassClient", client);
+				model.addAttribute("message", "This is unregistered mail!");
+				return "PassResetEmailConfirmation";
+			}
+		} catch (UserException e) {
+			return "Error";
 		}
 	}
 }

@@ -23,7 +23,10 @@
 <body>
 <jsp:include page="Home.jsp"></jsp:include>
 <div align="center">
+${newAccount}
 ${text}
+${isntAvailable}
+${gteaterThan}
  <form:form method="post"  commandName="combined">
  <form:errors path="*" element="div" cssClass="commonerrorblock"/>
  <table>

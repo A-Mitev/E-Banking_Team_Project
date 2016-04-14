@@ -22,6 +22,8 @@ import com.example.dao.CurrencyDAO;
 import com.example.dao.IAccountDAO;
 import com.example.dao.IBankProductDAO;
 import com.example.dao.ICurrencyDAO;
+import com.example.dao.IUserDAO;
+import com.example.dao.UserDAO;
 import com.example.exception.AccountException;
 import com.example.exception.BankProductException;
 import com.example.exception.CurrencyException;
@@ -30,16 +32,13 @@ import com.example.model.Account;
 import com.example.model.BankProduct;
 import com.example.model.CombinedNewAccountCommand;
 import com.example.model.Currency;
-import com.example.model.IBANGenerator;
 import com.example.model.User;
 
 @Controller
 @RequestMapping(value="/NewAccount")
 public class NewAccountController {
 
-	private static final String LOAN_ACCOUNT = "01";
-	private static final String DEPOSIT_ACCOUNT = "02";
-	private static final String PAYING_ACCOUNT = "03";
+	private static int numb=1;
 
 	@RequestMapping(method = RequestMethod.GET)
 	public String newAccount(Model model) throws BankProductException, CurrencyException {
@@ -70,10 +69,10 @@ public class NewAccountController {
 	}	
 	
 	 @RequestMapping(method = RequestMethod.POST)
-	    public String saveNewAccount(@ModelAttribute("combined") @Valid CombinedNewAccountCommand combined,BindingResult bindingResult, Model model, HttpServletRequest session) throws BankProductException, UserException, AccountException {
-		 
+	    public String saveNewAccount(@ModelAttribute("combined") @Valid CombinedNewAccountCommand combined,BindingResult bindingResult, Model model, HttpServletRequest session)  {
+		 try{
 		 if (bindingResult.hasErrors()) {
-	            return "NewAccount";
+	            return newAccount(model);
 	        }
 	        IBankProductDAO bankProductDAO=new BankProductDAO();
 			List<BankProduct> tmpBankProductsList=bankProductDAO.getAllBankProducts();
@@ -88,28 +87,29 @@ public class NewAccountController {
 				}
 			}
 			if(index==-1){
-				model.addAttribute("text1", "Sorry, this bank product isn't available anymore!");
-				return "NewAccount";
+				model.addAttribute("isntAvailable", "Sorry, this bank product isn't available anymore!");
+				return newAccount(model);
 			}
 			if(bankProductDAO.getBankProductById(index).getMinSum()>(int)combined.getSum()){
-				model.addAttribute("text2", "The initial sum must be equal or greater than the minimal sum for the product!");
-				return "NewAccount";
+				model.addAttribute("gteaterThan", "The initial sum must be equal or greater than the minimal sum for the product!");
+				return newAccount(model);
 			}
-			User user=(User)( session.getSession(false).getAttribute("user"));
-			String iban;
-			switch(tmp.getName()){
-			case "loan": iban=IBANGenerator.generateIBAN(LOAN_ACCOUNT);break;
-			case "deposit": iban=IBANGenerator.generateIBAN(DEPOSIT_ACCOUNT);break;
-			default: iban=IBANGenerator.generateIBAN(PAYING_ACCOUNT);
-			
-			}
-
-		Account acc=new Account(iban, (double)((int)(combined.getSum())), combined.getCurrency(),
+			//User user=(User)(session.getSession(false).getAttribute("user"));
+			IUserDAO usDAO=new UserDAO();
+			User user=usDAO.getUserById("123456789");
+			numb++;
+			Integer tmpNumb=new Integer(numb);
+            
+		    Account acc=new Account(tmpNumb.toString(), (double)((int)(combined.getSum())), combined.getCurrency(),
 					    user,new Date(Calendar.getInstance().getTime().getTime()), tmp);
-		IAccountDAO accountDAO=new AccountDAO();
+		    IAccountDAO accountDAO=new AccountDAO();
 			accountDAO.addAccount(acc);
-			model.addAttribute("text1","You've openned a new account!");
-	        return "NewAccount";
+			model.addAttribute("newAccount","You've openned a new account!");
+			return newAccount(model);
+		 }
+		 catch(Exception e){
+			 return "Error";
+		 }
 			
 	        
 	    }	

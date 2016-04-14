@@ -13,9 +13,9 @@ public class HomeController {
 
 	@RequestMapping(method = RequestMethod.GET, value="/Home")
 	public String sayHello(Model model, HttpServletRequest request) {
-//		if(request.getSession(false)==null){
-//		return "index";
-//	}	
+	if(request.getSession(false)==null){
+		return "index";
+	}	
 	return "Home";
 }
 }

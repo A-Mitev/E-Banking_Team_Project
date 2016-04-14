@@ -6,6 +6,8 @@ import javax.validation.constraints.Size;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotBlank;
 
+import com.example.exception.LogInRecordException;
+
 public class User {
 	
 	@NotNull(message = "The EGN/Bulstat is compulsory!")
@@ -55,18 +57,20 @@ public class User {
 	}
 
 	public User(String id,String name, String address, String phone, String email, String password, String type) {
-		setId(id);
-		setName(name);
-		setAddress(address);
-		setPhone(phone);
-		setEmail(email);
-		setPassword(password);
-		setType(type);
+		System.out.println("st");
+		this.id=id;
+		this.name=name;
+		this.address=address;
+		this.phone=phone;
+		this.email=email;
+		this.password=password;
+		System.out.println("end");
+		
 		
 	}
 
 
-	public static String hashPasswordWithMD5(String password) {
+	public static String hashPasswordWithMD5(String password) throws Exception {
 		   try {
 		        java.security.MessageDigest md = java.security.MessageDigest.getInstance("MD5");
 		        byte[] array = md.digest(password.getBytes());
@@ -76,8 +80,10 @@ public class User {
 		       }
 		        return sb.toString();
 		    } catch (java.security.NoSuchAlgorithmException e) {
+		    	e.printStackTrace();
+				throw new Exception("Password codding problem!", e);
 		    }
-		    return null;
+		    
 		}
 	
 	public String getId() {

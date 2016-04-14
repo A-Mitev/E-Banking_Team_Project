@@ -1,5 +1,8 @@
 package com.example.controller;
 
+import java.sql.Date;
+import java.util.Calendar;
+
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -11,13 +14,19 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import com.example.dao.ILogInRecordDAO;
+import com.example.dao.IUserDAO;
+import com.example.dao.LogInRecordDAO;
 import com.example.dao.UserDAO;
+import com.example.exception.LogInRecordException;
 import com.example.exception.UserException;
+import com.example.model.LogInRecord;
 import com.example.model.User;
 @Controller
 @RequestMapping(value="/index")
 public class LoginController extends HttpServlet {
 
+	private static final int MAX_INACTIVE_INTERVAL = 6;
 	/**
 	 * 
 	 */
@@ -31,17 +40,37 @@ public class LoginController extends HttpServlet {
 	
 	@RequestMapping(method = RequestMethod.POST)
 	public String userAuthentication(HttpServletRequest request,@RequestParam("email")String email,
-			@RequestParam("pass") String pass, Model model) throws UserException{
-		    UserDAO client = new UserDAO();
-		    if(client.isUserExcisting(email, pass) != null){
-			String id = client.isUserExcisting(email, pass).getId();
-			String name = client.isUserExcisting(email, pass).getName();
-			HttpSession session = request.getSession();
+			@RequestParam("pass") String pass, Model model) {
+		    IUserDAO client = new UserDAO();
+		    String password;
+			try {
+				password = User.hashPasswordWithMD5(pass);
+			} catch (Exception e) {
+				return "Error";
+			}
+		    pass=null;
+		    User user;
+			try {
+				user = client.isUserExcisting(email, password);
+			} catch (UserException e) {
+				return "Error";
+			}
+		    if( user != null){
+			String id = user.getId();
+			String name = user.getName();
+			 HttpSession session = request.getSession(true);
 			session.setAttribute("name", name);
 			session.setAttribute("id", id);
-			session.setAttribute("user", client.isUserExcisting(email, pass));
+			session.setAttribute("user", user);
+			session.setMaxInactiveInterval(MAX_INACTIVE_INTERVAL);
 			
-			session.setMaxInactiveInterval(60);
+			LogInRecord log=new LogInRecord(new Date(Calendar.getInstance().getTime().getTime()),user , request.getRemoteAddr());
+			ILogInRecordDAO logDAO=new LogInRecordDAO();
+			try {
+				logDAO.addLogInRecord(log);
+			} catch (LogInRecordException e) {
+				return "Error";
+			}
 			
 			return "Home";
 		} else {

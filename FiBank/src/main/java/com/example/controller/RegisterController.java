@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.example.dao.IUserDAO;
 import com.example.dao.UserDAO;
 import com.example.exception.UserException;
 import com.example.model.User;
@@ -26,7 +27,7 @@ public class RegisterController {
 
 	@RequestMapping(method = RequestMethod.POST)
 	public String addClient(User client, @ModelAttribute("user") @Valid User user, BindingResult bindingResult,
-			Model model) throws UserException {
+			Model model){
 		if (bindingResult.hasErrors()) {
 
 			return "Register";
@@ -41,8 +42,19 @@ public class RegisterController {
 		if (code < 0) {
 			code *= -1;
 		}
-		UserDAO newClient = new UserDAO();
-		newClient.addUser(client);
+		String password;
+		try {
+			password = User.hashPasswordWithMD5(client.getPassword());
+		} catch (Exception e) {
+			return "Error";
+		}
+		client.setPassword(password);
+		IUserDAO newClient = new UserDAO();
+		try {
+			newClient.addUser(client);
+		} catch (UserException e) {
+			return "Error";
+		}
 		model.addAttribute("text", "Registration was successful!" + "\n" + "Please log in!");
 		return "index";
 	}

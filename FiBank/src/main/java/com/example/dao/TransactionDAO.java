@@ -15,12 +15,12 @@ import com.example.model.User;
 
 public class TransactionDAO extends AbstractDAO implements ITransactionDAO {
 	private static final String SELECT_TRANSACTION_BY_ID_QUERY = "SELECT * FROM transactions WHERE id_transaction= ?";
-	private static final String SELECT_TRANSACTIONS_BY_USER_ID_QUERY = "SELECT * FROM transactions WHERE sender_iban = ?";
+	private static final String SELECT_TRANSACTIONS_BY_USER_ID_QUERY = "SELECT * FROM transactions t join accounts a ON (t.sender_iban=a.iban) join  users u on (a.account_holder=u.id) WHERE id=?";
 	private static final String SELECT_TRANSACTIONS_BY_DATE_QUERY = "SELECT * FROM transactions WHERE date = ?";
 	private static final String DELETE_TRANSACTION_BY_ID_QUERY = "DELETE FROM transactions WHERE id_transaction= ?";
 	private static final String DELETE_TRANSACTIONS_BY_USER_QUERY = "DELETE FROM transactions WHERE sender_iban= ?";
 	private static final String DELETE_TRANSACTIONS_BY_DATE_QUERY = "DELETE FROM transactions WHERE date= ?";
-	private static final String ADD_TRANSACION_QUERY = "INSERT INTO login_history VALUES (null, ?,?,?,?,?,?)";
+	private static final String ADD_TRANSACION_QUERY = "INSERT INTO transactions VALUES (null, ?,?,?,?,?,?)";
 
 	/* (non-Javadoc)
 	 * @see com.example.model.ITransactionDAO#addTransaction(com.example.model.Transaction)
@@ -150,8 +150,11 @@ public class TransactionDAO extends AbstractDAO implements ITransactionDAO {
 				transactionsList.add(tmpTransaction);
 
 			}
+			
+			System.out.println("DAOOOOOOOOOOOOOO"+transactionsList.size());
 
 			return transactionsList;
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 			throw new TransactionException("No transactions found for user with user id " + userId + "!", e);

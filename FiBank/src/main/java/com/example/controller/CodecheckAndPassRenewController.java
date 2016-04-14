@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.example.dao.IUserDAO;
 import com.example.dao.UserDAO;
 import com.example.exception.UserException;
 import com.example.model.User;
@@ -19,20 +20,24 @@ import com.example.model.User;
 public class CodecheckAndPassRenewController {
 	
 	@RequestMapping( method = RequestMethod.POST)
-	public String codeCheck(Model model, @RequestParam("code") String code,HttpServletRequest request) throws UserException {
+	public String codeCheck(Model model, @RequestParam("code") String code,HttpServletRequest request)  {
 		if(request.getSession() == null){
 			return "index";
 		}
 		String email = (String) request.getSession().getAttribute("email");
-		UserDAO user = new UserDAO();
-		if(user.emailConfirmationCodeMatch(email, code)){
-			User newPassword= new User();
-			model.addAttribute("user12", newPassword);
-		return "PassworReset";
-		} else {
-			model.addAttribute("noConfirmation", "Wrong combination of email and confirmation code");
-			request.getSession().invalidate();
-			return "index";
+		IUserDAO user = new UserDAO();
+		try {
+			if(user.emailConfirmationCodeMatch(email, code)){
+				User newPassword= new User();
+				model.addAttribute("user12", newPassword);
+			return "PassworReset";
+			} else {
+				model.addAttribute("noConfirmation", "Wrong combination of email and confirmation code");
+				request.getSession().invalidate();
+				return "index";
+			}
+		} catch (UserException e) {
+			return "Error";
 		}
 	}
 

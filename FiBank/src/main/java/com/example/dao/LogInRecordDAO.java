@@ -16,7 +16,7 @@ import com.example.model.User;
 public class LogInRecordDAO extends AbstractDAO implements ILogInRecordDAO {
 
 	private static final String SELECT_LOG_IN_RECORD_BY_ID_QUERY = "SELECT * FROM login_history WHERE id_login_history = ?";
-	private static final String SELECT_LOG_IN_RECORDS_BY_USER_ID_QUERY = "SELECT * FROM login_history WHERE id_of_user_who_logged_in = ?";
+	private static final String SELECT_LOG_IN_RECORDS_BY_USER_ID_QUERY = "SELECT * FROM login_history WHERE id_of_user_who_logged_in = ? ORDER BY date";
 	private static final String SELECT_LOG_IN_RECORDS_BY_DATE_QUERY = "SELECT * FROM login_history WHERE date = ?";
 	private static final String DELETE_LOG_IN_RECORD_BY_ID_QUERY = "DELETE FROM login_history WHERE id_login_history= ?";
 	private static final String DELETE_LOG_IN_RECORDS_BY_USER_QUERY = "DELETE FROM login_history WHERE id_of_user_who_logged_in= ?";

@@ -75,6 +75,7 @@ public class UserDAO extends AbstractDAO implements IUserDAO {
 	@Override
 	public User getUserById(String userId) throws UserException {
 
+		System.out.println(3);
 		try {
 			PreparedStatement ps = getCon().prepareStatement(SELECT_USER_BY_ID_QUERY);
 			ps.setString(1, userId);
@@ -88,6 +89,7 @@ public class UserDAO extends AbstractDAO implements IUserDAO {
 			String password = result.getString(6);
 			String type = result.getString(7);
 
+			System.out.println(4);
 			return new User(id, name, address, phone, email, password, type);
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -203,9 +205,9 @@ public class UserDAO extends AbstractDAO implements IUserDAO {
 			throw new UserException("Unregistered mail : " + email);
 		}
 	}
-	
+	@Override
 	public boolean emailConfirmationCodeMatch(String email, String code) throws UserException {
-		if (email == null | code == null) {
+		if (email == null || code == null) {
 			return false;
 		}
 
